@@ -1,7 +1,6 @@
 {
-  "name": "front-end-guide",
-  "version": "0.0.0",
-  "description": "Manage your front-end project in unique views and reusable components.",
+  "name": "mindspace",
+  "version": "0.1.0",
   "main": "source/index.js",
   "private": "yes",
   "scripts": {
@@ -20,20 +19,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/voorhoede/front-end-guide.git"
+    "url": "git://github.com/voorhoede/mindspace.git"
   },
   "keywords": [
     "front-end",
-    "guide",
-    "patternlab",
-    "reusable",
-    "components",
-    "modules"
+    "guide"
   ],
   "author": "De Voorhoede",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/voorhoede/front-end-guide/issues"
+    "url": "https://github.com/voorhoede/mindspace/issues"
   },
   "homepage": "https://github.com/voorhoede/front-end-guide",
   "devDependencies": {

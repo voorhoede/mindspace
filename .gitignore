@@ -5,3 +5,4 @@ src/vendor
 
 # project meta
 .idea
+npm-debug.log
