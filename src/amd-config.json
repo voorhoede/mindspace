@@ -4,7 +4,9 @@
         "components/app-header": "components/app-header/app-header",
         "components/search-menu": "components/search-menu/search-menu",
         "expandible": "vendor/expandible/expandible",
-	    "fastclick": "vendor/fastclick/lib/fastclick"
+        "fastclick": "vendor/fastclick/lib/fastclick",
+        "views/mindspace": "views/mindspace/mindspace"
     },
-	"shims": {}
+    "shims": {
+    }
 }
