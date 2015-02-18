@@ -1,0 +1,27 @@
+{% macro faqItem(question, answer, expanded='is-expandable') %}
+<div class="tinydetails" data-component="tinydetails">
+    <div class="expandible-handle panel panel-default {{expanded}}" data-expandible>
+        <div class="panel-heading expandible-handle"
+             data-expandible-handle="toggle">
+            <h3 class="panel-title">{{question}}</h3>
+        </div>
+        <div class="expandible-content"
+             data-expandible-content>
+            <p>{{answer}}</p>
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+<!-- tinydetails component -->
+<h2>The tiny details</h2>
+
+{{faqItem('When will I be able to use the first beta version?',
+        'lorem',
+        'is-expanded')}}
+{{faqItem('Where can I see the progress?','Lorem ipsum ')}}
+{{faqItem('What are the system requirements? ','Lorem ipsum ')}}
+{{faqItem('I have questions, how can I reach the Mindspace team?','Lorem ipsum')}}
+{{faqItem('What’s coming next? Are there any new, exciting ideas for the future?','Lorem ipsum')}}
+
+<!-- /tinydetails component -->
