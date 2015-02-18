@@ -5,3 +5,24 @@
 @brand-warning:		#f0ad4e;
 @brand-danger:		#d9534f;
 @background:		#001730;
+
+// breakpoints
+@breakpoint-small: 400px;
+@breakpoint-between: 568px;
+@breakpoint-medium: 800px;
+@breakpoint-large: 1024px;
+@breakpoint-xlarge: 1280px;
+
+//mediaquery mixin
+//usage: @media(@xs){}
+@xxs: ~'max-width: 377px';
+@xs:  ~'max-width: @{screen-xs-max}';
+@sm:  ~'max-width: @{screen-sm-max}';
+@md:  ~'max-width: @{screen-md-max}';
+
+// colors:
+@primary-font-color:	#256FB7;
+@primary-button-color:	#3E8FDF;
+@sand-button-color:		#9E7A55;
+@grey-button-color:		#9B9B9B;
+
