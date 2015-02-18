@@ -1,36 +1,59 @@
 // Typography
 @import "variables";
 
-body {
+@font-face {
 	font-family: 'proxima nova light';
+	src:
+	local('proxima nova light'),
+	url('assets/fonts/proximaNovaLight.woff') format('woff2'), /* Chrome 26+, Opera 23+ */
+	url('assets/fonts/proximaNovaLight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+	font-family: 'proxima nova semi bold';
+	src:
+	local('proxima nova semi bold'),
+	url('assets/fonts/proximaNovaSemiBold.woff') format('woff2'), /* Chrome 26+, Opera 23+ */
+	url('assets/fonts/proximaNovaSemiBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+	font-family: 'the great escape';
+	src:
+	local('the great escape'),
+	url('assets/fonts/theGreatEscape.woff') format('woff2'), /* Chrome 26+, Opera 23+ */
+	url('assets/fonts/theGreatEscape.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+body {
+	font-family: @light-font;
 	font-size: 24px;
 	line-height: 39px;
-	color: #4A4A4A;
+	color: #fff;
 }
 
 h1 {
-	font-size: 52px;
-	line-height: 64px;
-	font-family: 'proxima nova bold'; //should be semibold
+	font-size:  42px;
+	line-height: 58px;
+	font-family: @semibold-font; //should be semibold
 	color: @primary-font-color;
 }
 
 h2 {
-	font-size: 42px;
-	line-height: 58px;
-	font-family: 'proxima nova light';
+	font-size: 32px;
+	line-height: 44px;
+	font-family: @light-font;
 	color: @primary-font-color;
 }
 
 h3 {
-	font-size: 32px;
-	line-height: 44px;
+	font-size: 24px;
+	line-height: 39px;
 	color: #4A4A4A;
 }
 
 .written {
 	font-size: 32px;
 	line-height: 54px;
-	font-family: 'the great escape';
+	font-family: @written-font;
 	color: #4A4A4A;
 }

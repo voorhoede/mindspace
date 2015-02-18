@@ -10,13 +10,18 @@
 
 //mediaquery mixin
 //usage: @media(@xs){}
-@xxs: ~'max-width: 377px';
-@xs:  ~'max-width: @{screen-xs-max}';
-@sm:  ~'max-width: @{screen-sm-max}';
-@md:  ~'max-width: @{screen-md-max}';
+@xxs: ~'max-width: @{breakpoint-small}';
+@xs:  ~'max-width: @{breakpoint-between}';
+@sm:  ~'max-width: @{breakpoint-medium}';
+@md:  ~'max-width: @{breakpoint-large}';
 
 // colors:
 @primary-font-color:	#256FB7;
 @primary-button-color:	#3E8FDF;
 @sand-button-color:		#9E7A55;
 @grey-button-color:		#9B9B9B;
+
+//Fonts
+@light-font: 'proxima nova light', sans-serif;
+@semibold-font: 'proxima nova semi-bold', sans-serif;
+@written-font: 'the great escape', sans-serif;
