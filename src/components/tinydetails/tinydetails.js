@@ -3,5 +3,5 @@ define([
 ], function(Expandible){
 	'use strict';
 	// write behavior for tinydetails component
-    var expandibleInit = new Expandible();
+    var expandableInit = new Expandible();
 });
