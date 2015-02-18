@@ -27,7 +27,7 @@ body {
 	font-family: Arial;
 	font-size: 1.2em;
 	line-height: 1.5em;
-	color: @brand-default;
+	color: #fff;
 	width: 95%;
 	margin: 0 auto;
 	padding: 0;
@@ -35,15 +35,22 @@ body {
 }
 
 a:link {
-	color: @brand-highlight;
+	color: @brand-default;
 }
 a:visited {
-	color: darken(@brand-highlight, 20%);
+	color: darken(@brand-default, 20%);
 }
 a:hover,
 a:focus {
-	color: lighten(@brand-highlight, 20%);
+	color: lighten(@brand-default, 20%);
 }
 a:active {
 
+}
+
+h1, h2, h3 {
+	color: @brand-default;
+	&.alt{
+		color: @brand-default;
+	}
 }
