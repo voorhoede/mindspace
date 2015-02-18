@@ -2,6 +2,7 @@
     "paths": {
         "airhooks": "vendor/airhooks/airhooks",
         "components/app-header": "components/app-header/app-header",
+        "components/form-beta-tester": "components/form-beta-tester/form-beta-tester",
         "expandible": "vendor/expandible/expandible",
         "fastclick": "vendor/fastclick/lib/fastclick",
         "views/mindspace": "views/mindspace/mindspace"

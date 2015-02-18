@@ -1,0 +1,99 @@
+<!-- form-beta-tester component -->
+{% macro countrySelect(countryName, countryId) %}
+<li class="fake-select-option">
+    <input class="fake-select-radio" type="radio" id="{{ countryId }}" name="country" value="{{ countryId }}"/>
+    <label class="fake-select-label" for="{{ countryId }}">{{ countryName }}</label>
+</li>
+{% endmacro %}
+
+{% macro avatar(avatarId, <avatarImage></avatarImage>, avatarAlt) %}
+<li>
+    <label for="{{ avatarId }}"><img src="{{ avatarImage }}" alt="{{ avatarAlt }}"/></label>
+    <input id="{{ avatarId }}" type="radio" name="avatar"/>
+</li>
+{% endmacro %}
+
+{% macro facebook(url) %}
+<a class="social-icon facbook" href="https://www.facebook.com/sharer/sharer.php?u={{ url | urlencode }}">
+    Facebook
+</a>
+{% endmacro %}
+
+{% macro linkedIn(url, title, text, source) %}
+<a class="social-icon linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url={{ url | urlencode }}&title={{ title | urlencode }}&summary={{ text | urlencode }}&source={{ source | urlencode }}">
+    LinkedIn
+</a>
+{% endmacro %}
+
+{% macro twitter(url, text) %}
+<a class="social-icon twitter" href="http://twitter.com/intent/tweet?url={{ url | urlencode }}&text={{ text | urlencode }}">
+    Twitter
+</a>
+{% endmacro %}
+
+<section class="form-beta-tester" data-component="form-beta-tester">
+    <form>
+        <img src="ufo.jpg" alt="Big ufo">
+
+        <h2>We need you as a beta tester!</h2>
+        <span><strong>Become one of the 100 lucky co-pilots by pledging $ 4.50. Every single one of you will get:</strong></span>
+
+        <ul class="icon-list checked">
+            <li>Exclusive access to the beta version of the app</li>
+            <li>2 free years of Mindspace when we launch version 1.0</li>
+            <li>A special reduced yearly fee of $ 4.50 after the first two years</li>
+            <li>Eternal fame! We mention your name in the ‘about section’ off the app</li>
+        </ul>
+        <div class="form-part form-step-signup" data-form-part="1">
+            <input type="text" placeholder="Name" name="name">
+            <input type="text" placeholder="Email" name="email">
+            <div class="custom-selectbox">
+                <input type="hidden" name="country" id="country">
+                <div class="fake-input">Country</div>
+                <ul class="fake-select-section">
+                    {{ countrySelect('Nederland', '1') }}
+                    {{ countrySelect('Nederland', '2') }}
+                </ul>
+            </div>
+            <button data-form-handle="next"> Sign up </button>
+        </div>
+
+        <div class="form-part form-step-avatar" data-form-part="2">
+            <h2>Awesome, thanks for your support!</h2>
+            <span><strong>Ready for the spotlight? </strong></span>
+            <p> Complete your registration by selecting your funky suit.</p>
+
+            <ul>
+                {{ avatar('1', 'avatar.jpg', 'A funky name') }}
+                {{ avatar('1', 'avatar.jpg', 'A funky name') }}
+                {{ avatar('1', 'avatar.jpg', 'A funky name') }}
+                {{ avatar('1', 'avatar.jpg', 'A funky name') }}
+                {{ avatar('1', 'avatar.jpg', 'A funky name') }}
+                {{ avatar('1', 'avatar.jpg', 'A funky name') }}
+            </ul>
+            <button data-form-handle="next"> Next </button>
+        </div>
+
+        <div class="form-part form-step-thankyou" data-form-part="3">
+            <h2>Ready for take-off!</h2>
+            <span><strong>What’s next?</strong></span>
+
+            <ul>
+                <li>We will keep you up to date about the process</li>
+                <li>You will recieve an email confirmation with your receipt</li>
+            </ul>
+
+            <p>Tell others about Mindspace and help us find the remaining [78] co-pilots!</p>
+
+            <ul data-component="social-share">
+                <li>{{ facebook(pkg.homepage) }}</li>
+                <li>{{ linkedIn(pkg.homepage, pkg.name, pkg.description, 'De Voorhoede') }}</li>
+                <li>{{ twitter(pkg.homepage, pkg.description) }}</li>
+            </ul>
+
+            <button data-form-handle="submit"> Next </button>
+        </div>
+        </form>
+    </form>
+</section>
+<!-- /form-beta-tester component -->
