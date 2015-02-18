@@ -3,6 +3,8 @@
         "airhooks": "vendor/airhooks/airhooks",
         "components/app-header": "components/app-header/app-header",
         "components/form-beta-tester": "components/form-beta-tester/form-beta-tester",
+        "components/tinydetails": "components/tinydetails/tinydetails",
+        "components/whatis": "components/whatis/whatis",
         "expandible": "vendor/expandible/expandible",
         "fastclick": "vendor/fastclick/lib/fastclick",
         "views/mindspace": "views/mindspace/mindspace"
