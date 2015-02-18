@@ -1,0 +1,37 @@
+<!-- member-section component -->
+{% macro member(name, image, residence='') %}
+    <li class="member-item">
+        <img class="member-image" src="{{ image }}" alt="{{ name }}">
+        <span class="member-name">{{ name }}</span>
+        {% if residence %}
+        <span class="member-residence">{{ residence }}</span>
+        {% endif %}
+    </li>
+{% endmacro %}
+
+
+<section class="member-section" data-component="member-section">
+    <header class="member-header">
+        <img src="space-ship.png" alt="Spaceship with path">
+        <div class="gate-keeper">
+            <span class="member-count">76</span>
+            <img src="gate.png" alt="Gate">
+        </div>
+    </header>
+
+    <div class="member-content">
+        <h3>Become a co-pilot!</h3>
+        <ul class="member-list" data-content-loader>
+            {{ member( 'Han Solo', residence='San Fransisco', 'image.jpg') }}
+            {{ member( 'Han Solo', residence='San Fransisco', 'image.jpg') }}
+            {{ member( 'Han Solo', residence='San Fransisco', 'image.jpg') }}
+            {{ member( 'Han Solo', residence='San Fransisco', 'image.jpg') }}
+            {{ member( 'Han Solo', residence='San Fransisco', 'image.jpg') }}
+            {{ member( 'Anonymous', 'image.jpg') }}
+            {{ member( 'Anonymous', 'image.jpg') }}
+        </ul>
+
+        <button data-content-loader-handle>Load more</button>
+    </div>
+</section>
+<!-- /member-section component -->
