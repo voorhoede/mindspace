@@ -2,8 +2,16 @@
 
 {% block title %}mindspace | {{ super() }}{% endblock %}
 
+<!--include testimonial macro-->
+{% include "components/testimonial/testimonial.html" %}
+
 {% block content %}
     <!-- mindspace view -->
     {% include "components/intro/intro.html" %}
+    {% include "components/whatis/whatis.html" %}
+    {{testimonial('Daan van Klinken',
+                'interaction designer at UNITiD',
+                'Keeping notes during a design discussion is now just one shortcut away'
+    )}}
     <!-- /mindspace view -->
 {% endblock %}
