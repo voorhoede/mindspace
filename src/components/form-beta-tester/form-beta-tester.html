@@ -6,7 +6,7 @@
 </li>
 {% endmacro %}
 
-{% macro avatar(avatarId, <avatarImage></avatarImage>, avatarAlt) %}
+{% macro avatar(avatarId, avatarImage, avatarAlt) %}
 <li>
     <label for="{{ avatarId }}"><img src="{{ avatarImage }}" alt="{{ avatarAlt }}"/></label>
     <input id="{{ avatarId }}" type="radio" name="avatar"/>
