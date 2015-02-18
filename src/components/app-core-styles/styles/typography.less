@@ -26,34 +26,54 @@
 }
 body {
 	font-family: @light-font;
-	font-size: 24px;
-	line-height: 39px;
+	font-size: 16px; //24
+	line-height: 26px; //39
 	color: #fff;
+
+	@media(@md) {
+		font-size: 24px;
+		line-height: 39px;
+	}
 }
 
 h1 {
-	font-size:  42px;
-	line-height: 58px;
+	font-size:  21px; //42
+	line-height: 29px; //58
 	font-family: @semibold-font; //should be semibold
 	color: @primary-font-color;
+
+	@media(@md) {
+		font-size: 42px;
+		line-height: 58px;
+	}
 }
 
 h2 {
-	font-size: 32px;
-	line-height: 44px;
+	font-size: 16px; //32
+	line-height: 22px; //44
 	font-family: @light-font;
 	color: @primary-font-color;
+
+	@media(@md) {
+		font-size: 32px;
+		line-height: 44px;
+	}
 }
 
 h3 {
-	font-size: 24px;
-	line-height: 39px;
+	font-size: 18px; //24
+	line-height: 39px; //39
 	color: #4A4A4A;
+
+	@media(@md) {
+		font-size: 24px;
+		line-height: 39px;
+	}
 }
 
 .written {
-	font-size: 32px;
-	line-height: 54px;
+	font-size: 32px; //32
+	line-height: 54px; //54
 	font-family: @written-font;
 	color: #4A4A4A;
 }

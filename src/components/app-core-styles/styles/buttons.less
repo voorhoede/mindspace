@@ -7,6 +7,50 @@
 	text-decoration: none;
 }
 
-button {
+a {
+	color: inherit;
+	text-decoration: underline;
 
+	&:hover {
+		color: red;
+	}
+}
+
+button {
+	background: @primary-button-color;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	font-family: @semibold-font;
+	font-size: 21px;
+	line-height: 18px;
+	padding: 17px 30px 14px;
+	text-align: center;
+
+	&:hover {
+		background: red;
+	}
+
+	@media(@sm) {
+		font-size: 32px;
+		line-height: 58px;
+		padding: 10px 30px;
+	}
+}
+
+button.sand {
+	background: @sand-button-color;
+
+	&:hover {
+		background: red;
+	}
+}
+
+button.grey {
+	background: @grey-button-color;
+
+	&:hover {
+		background: red;
+	}
 }
