@@ -1,0 +1,39 @@
+// star background animation
+@keyframes move-twink-back {
+from {background-position:0 0;}
+to {background-position:-10000px 5000px;}
+}
+
+@-webkit-keyframes move-twink-back {
+from {background-position:0 0;}
+to {background-position:-10000px 5000px;}
+}
+
+@-moz-keyframes move-twink-back {
+from {background-position:0 0;}
+to {background-position:-10000px 5000px;}
+}
+
+body {
+	position: relative;
+	z-index: -1;
+	background: transparent url('images/01_star-background.png') repeat;
+	background-size: 50%;
+}
+body:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(0, transparent 0, @background 44%, @background 56%, transparent 100%);
+	background-size: 50px 50px;
+	z-index: -1;
+
+	-moz-animation:move-twink-back 200s linear infinite;
+	-o-animation:move-twink-back 200s linear infinite;
+	-webkit-animation:move-twink-back 200s linear infinite;
+	animation:move-twink-back 200s linear infinite;
+
+}
