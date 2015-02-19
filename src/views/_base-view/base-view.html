@@ -32,7 +32,9 @@
 </head>
 <body data-module="{{ module.id }}">
 {% block appHeader %}
-{% include "components/app-header/app-header.html" %}
+<div class="header-wrapper">
+    {% include "components/app-header/app-header.html" %}
+</div>
 {% endblock %}
 
 {% block main %}
