@@ -4,5 +4,31 @@
 /* intro component */
 .intro {
 	// add style rules for component within `.intro` namespace.
+	text-align: center;
+
+	.video-container{
+		margin: 0 auto;
+		@media(@xs){
+			width: 70%;
+		}
+		@media(@sm){
+			width: 50%;
+		}
+		img, video{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.learn-more{
+		margin: .8em auto 0 auto;
+
+		a:link, a:visited {
+			color: #fff;
+		}
+		a:hover {
+			color: darken(#fff, 20%);
+		}
+	}
 }
 /* /intro component */
