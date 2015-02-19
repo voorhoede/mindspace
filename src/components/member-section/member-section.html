@@ -13,13 +13,15 @@
     <div class="member-content">
         <h3>Become a co-pilot!</h3>
         <ul class="member-list" data-content-loader>
-            {{ member( 'Han Solo', residence='San Fransisco', 'image.jpg') }}
-            {{ member( 'Han Solo', residence='San Fransisco', 'image.jpg') }}
-            {{ member( 'Han Solo', residence='San Fransisco', 'image.jpg') }}
-            {{ member( 'Han Solo', residence='San Fransisco', 'image.jpg') }}
-            {{ member( 'Han Solo', residence='San Fransisco', 'image.jpg') }}
-            {{ member( 'Anonymous', 'image.jpg') }}
-            {{ member( 'Anonymous', 'image.jpg') }}
+            {{ member( name='Han Solo', residence='San Fransisco', image='http://lorempixel.com/100/100/people') }}
+            {{ member( name='Han Solo', residence='San Fransisco', image='http://lorempixel.com/100/100/people') }}
+            {{ member( name='Han Solo', residence='San Fransisco', image='http://lorempixel.com/100/100/people') }}
+            {{ member( name='Han Solo', residence='San Fransisco', image='http://lorempixel.com/100/100/people') }}
+            {{ member( name='Han Solo', residence='San Fransisco', image='http://lorempixel.com/100/100/people') }}
+            {{ member( name='Han Solo', residence='San Fransisco', image='http://lorempixel.com/100/100/people') }}
+
+            {{ member( name='Anonymous', image='http://lorempixel.com/100/100/people') }}
+            {{ member( name='Anonymous', image='http://lorempixel.com/100/100/people') }}
         </ul>
 
         <button class="sand" data-content-loader-handle>Load more</button>
