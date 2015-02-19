@@ -32,9 +32,14 @@
 	.member-item {
 		display: inline-block;
 		vertical-align: top;
-		width: 120px;
-		min-height: 130px;
-		padding-bottom: 20px;
+		width: 80px;
+		min-height: 90px;
+		padding: 0 5px 20px;
+
+		@media (@xxs){
+			width: 120px;
+			min-height: 130px;
+		}
 	}
 
 	&:not(.no-description){
@@ -44,6 +49,7 @@
 	}
 	.member-image {
 		border-radius: 100%;
+		max-width: 100%;
 	}
 	.member-name {
 		font-family: @semibold-font;
