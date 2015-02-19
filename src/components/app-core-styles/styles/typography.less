@@ -4,31 +4,31 @@
 @font-face {
 	font-family: 'proxima nova light';
 	src:
-	local('proxima nova light'),
-	url('assets/fonts/proximaNovaLight.woff') format('woff2'), /* Chrome 26+, Opera 23+ */
-	url('assets/fonts/proximaNovaLight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		local('proxima nova light'),
+		url('fonts/proximanova-light.woff') format('woff2'), /* Chrome 26+, Opera 23+ */
+		url('fonts/proximanova-light.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 @font-face {
-	font-family: 'proxima nova semi bold';
+	font-family: 'proxima nova semi-bold';
 	src:
-	local('proxima nova semi bold'),
-	url('assets/fonts/proximaNovaSemiBold.woff') format('woff2'), /* Chrome 26+, Opera 23+ */
-	url('assets/fonts/proximaNovaSemiBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		local('proxima nova semi bold'),
+		url('fonts/proximanova-semibold.woff') format('woff2'), /* Chrome 26+, Opera 23+ */
+		url('fonts/proximanova-semibold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 @font-face {
 	font-family: 'the great escape';
 	src:
-	local('the great escape'),
-	url('assets/fonts/theGreatEscape.woff') format('woff2'), /* Chrome 26+, Opera 23+ */
-	url('assets/fonts/theGreatEscape.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		local('the great escape'),
+		url('fonts/thegreatescape.woff') format('woff2'), /* Chrome 26+, Opera 23+ */
+		url('fonts/thegreatescape.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 body {
+	color: #fff;
 	font-family: @light-font;
 	font-size: 16px; //24
 	line-height: 26px; //39
-	color: #fff;
 
 	@media(@md) {
 		font-size: 24px;
@@ -37,10 +37,11 @@ body {
 }
 
 h1 {
-	font-size:  21px; //42
-	line-height: 29px; //58
-	font-family: @semibold-font; //should be semibold
 	color: @primary-font-color;
+	font-family: @semibold-font; //should be semibold
+	font-size:  21px; //42
+	font-weight: normal;
+	line-height: 29px; //58
 
 	@media(@md) {
 		font-size: 42px;
@@ -49,10 +50,11 @@ h1 {
 }
 
 h2 {
-	font-size: 16px; //32
-	line-height: 22px; //44
-	font-family: @light-font;
 	color: @primary-font-color;
+	font-family: @semibold-font;
+	font-size: 16px; //32
+	font-weight: normal;
+	line-height: 22px; //44
 
 	@media(@md) {
 		font-size: 32px;
@@ -61,9 +63,11 @@ h2 {
 }
 
 h3 {
-	font-size: 18px; //24
-	line-height: 39px; //39
 	color: #4A4A4A;
+	font-family: @semibold-font;
+	font-size: 18px; //24
+	font-weight: normal;
+	line-height: 39px; //39
 
 	@media(@md) {
 		font-size: 24px;
@@ -72,10 +76,10 @@ h3 {
 }
 
 .written {
+	color: #4A4A4A;
+	font-family: @written-font;
 	font-size: 32px; //32
 	line-height: 54px; //54
-	font-family: @written-font;
-	color: #4A4A4A;
 }
 
 .section-title {}
