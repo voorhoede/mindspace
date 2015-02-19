@@ -37,15 +37,15 @@
 
 {% block main %}
 <main id="content" role="main">
-    <!-- tabindex fixes focus issue, alternatively use generic script: http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/ -->
-    <!-- @todo: add nav[role="navigation"] as TOC -->
     {% block content %}
     {% endblock %}
 </main>
 {% endblock %}
 
 {% block appFooter %}
-{% include "components/footer/footer.html" %}
+<div class="footer-wrapper">
+    {% include "components/footer/footer.html" %}
+</div>
 {% endblock %}
 
 {% block scripts %}

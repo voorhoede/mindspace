@@ -4,5 +4,40 @@
 /* footer component */
 .footer {
 	// add style rules for component within `.footer` namespace.
+
+	.end-note {
+		background-color: #252525;
+		padding: 1.5em 0;
+		text-align: center;
+
+		a:link, a:visited {
+			color: #fff;
+		}
+		a:hover {
+			color: darken(#fff, 20%);
+		}
+		ul {
+			list-style: none;
+			display: inline-block;
+			margin: 0;
+			padding-left: 0;
+			li {
+				padding: 0;
+				display: inline-block;
+
+				&:after {
+					content: '||';
+					margin-left: .5em;
+
+				}
+
+				&:last-child:after {
+					display: none;
+				}
+			}
+		}
+	}
+
 }
+
 /* /footer component */

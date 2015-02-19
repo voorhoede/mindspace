@@ -28,14 +28,18 @@ body {
 	font-size: 1.2em;
 	line-height: 1.5em;
 	color: #fff;
-	width: 95%;
-	margin: 0 auto;
+	width: 100%;
 	padding: 0;
+	margin:0;
 	background-color: @background;
 }
 
 a:link {
 	color: @brand-default;
+	-webkit-transition: color 200ms ease-out;
+	-moz-transition: color 200ms ease-out;
+	transition: color 200ms ease-out;
+	text-decoration: none;
 }
 a:visited {
 	color: darken(@brand-default, 20%);
@@ -48,9 +52,9 @@ a:active {
 
 }
 
-h1, h2, h3 {
-	color: @brand-default;
-	&.alt{
-		color: @brand-default;
+main section{
+	margin: 0 auto;
+	@media(@md){
+		width: 1000px;
 	}
 }
