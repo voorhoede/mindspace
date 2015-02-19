@@ -12,18 +12,20 @@
 {% endmacro %}
 
 <!-- tinydetails component -->
-<section class="tinydetails" data-component="tinydetails">
-    <h2>The tiny details</h2>
+<div class="tinydetails" data-component="tinydetails">
+    <section>
+        <h2>The tiny details</h2>
 
-    <div>
-        {{faqItem('When will I be able to use the first beta version?',
-                'lorem',
-                'is-expanded')}}
-        {{faqItem('Where can I see the progress?','Lorem ipsum ')}}
-        {{faqItem('What are the system requirements? ','Lorem ipsum ')}}
-        {{faqItem('I have questions, how can I reach the Mindspace team?','Lorem ipsum')}}
-        {{faqItem('What’s coming next? Are there any new, exciting ideas for the future?','s')}}
-    </div>
-</section>
+        <div>
+            {{faqItem('When will I be able to use the first beta version?',
+                    'lorem',
+                    'is-expanded')}}
+            {{faqItem('Where can I see the progress?','Lorem ipsum ')}}
+            {{faqItem('What are the system requirements? ','Lorem ipsum ')}}
+            {{faqItem('I have questions, how can I reach the Mindspace team?','Lorem ipsum')}}
+            {{faqItem('What’s coming next? Are there any new, exciting ideas for the future?','s')}}
+        </div>
+    </section>
+</div>
 
 <!-- /tinydetails component -->

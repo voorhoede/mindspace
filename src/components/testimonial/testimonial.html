@@ -1,16 +1,18 @@
 <!-- testimonial macro -->
 {% macro testimonial(name, position, quote) %}
-<section class="testimonial" data-component="testimonial">
-    <h2>Team Mindspace</h2>
-    <figure>
-        <img src="" alt="" title=""/>
-        <figcaption>
-            <em>{{name}}</em>, {{position}}
-        </figcaption>
-    </figure>
-    <blockquote>
-        &ldquo;{{quote}}.;&rdquo;
-    </blockquote>
-</section>
+<div class="testimonial" data-component="testimonial">
+    <section>
+        <h2>Team Mindspace</h2>
+        <figure>
+            <img src="" alt="" title=""/>
+            <figcaption>
+                <em>{{name}}</em>, {{position}}
+            </figcaption>
+        </figure>
+        <blockquote>
+            &ldquo;{{quote}}.;&rdquo;
+        </blockquote>
+    </section>
+</div>
 {% endmacro %}
 <!-- /testimonial component -->
