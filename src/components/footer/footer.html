@@ -1,33 +1,20 @@
+{% include "components/team-member/team-member.html" %}
 <!-- footer component -->
 <div class="footer" data-component="footer">
     <section class="footer-section">
-        <h2>Meet the makers!</h2>
-        <p>Mindspace is a collaboration between Egeniq and UNITiD</p>
+        <h2 class="section-title">Meet the makers!</h2>
+        <p class="section-subtitle">Mindspace is a collaboration between Egeniq and UNITiD</p>
 
         <ul class="member-list no-description">
-            <li class="member-item">
-                <a href="" target="_blank" title="">
-                    <img class="member-image" src="" alt="Egeniq">
-                </a>
-            </li>
-            <li class="member-item">
-                <a href="" target="_blank" title="">
-                    <img class="member-image" src="" alt="UNITiD">
-                </a>
-            </li>
+            {{ member( image='http://lorempixel.com/100/100/people', alt='Egeniq') }}
+            {{ member( image='http://lorempixel.com/100/100/people', alt='UNITiD') }}
         </ul>
 
         <ul class="member-list">
-            <li class="member-item">
-                <img class="member-image" src="" alt="Han Solo">
-                <span class="member-name">Han Solo</span>
-                <span class="member-residence">San Fransisco</span>
-            </li>
-            <li class="member-item">
-                <img class="member-image" src="" alt="Han Solo">
-                <span class="member-name">Han Solo</span>
-                <span class="member-residence">San Fransisco</span>
-            </li>
+            {{ member( name='Han Solo', residence='San Fransisco', image='http://lorempixel.com/100/100/people') }}
+            {{ member( name='Han Solo', residence='San Fransisco', image='http://lorempixel.com/100/100/people') }}
+            {{ member( name='Han Solo', residence='San Fransisco', image='http://lorempixel.com/100/100/people') }}
+            {{ member( name='Han Solo', residence='San Fransisco', image='http://lorempixel.com/100/100/people') }}
         </ul>
 
         <footer class="end-note">

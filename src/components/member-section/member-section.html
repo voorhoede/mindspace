@@ -1,15 +1,6 @@
+{% include "components/team-member/team-member.html" %}
+
 <!-- member-section component -->
-{% macro member(name, image, residence='') %}
-    <li class="member-item">
-        <img class="member-image" src="{{ image }}" alt="{{ name }}">
-        <span class="member-name">{{ name }}</span>
-        {% if residence %}
-        <span class="member-residence">{{ residence }}</span>
-        {% endif %}
-    </li>
-{% endmacro %}
-
-
 <section class="member-section" data-component="member-section">
     <header class="member-header">
         <img src="space-ship.png" alt="Spaceship with path">
