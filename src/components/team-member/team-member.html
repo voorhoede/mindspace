@@ -1,0 +1,14 @@
+<!-- team-member component -->
+{% macro member(image='', name='', residence='', alt='') %}
+<li class="member-item">
+    <img class="member-image" src="{{ image }}" alt="Team Member {{ alt }}">
+    {% if name %}
+    <span class="member-name">{{ name }}</span>
+    {% endif %}
+
+    {% if residence %}
+    <span class="member-residence">{{ residence }}</span>
+    {% endif %}
+</li>
+{% endmacro %}
+<!-- /team-member component -->
