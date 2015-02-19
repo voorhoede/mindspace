@@ -25,11 +25,22 @@
 	list-style: none;
 	font-size: 14px;
 	line-height: 21px;
+	padding: 0;
+	margin: 0;
+	text-align: center;
 
 	.member-item {
 		display: inline-block;
+		vertical-align: top;
 		width: 120px;
+		min-height: 130px;
+		padding-bottom: 20px;
+	}
 
+	&:not(.no-description){
+		.member-item {
+			min-height: 200px;
+		}
 	}
 	.member-image {
 		border-radius: 100%;
