@@ -2,21 +2,85 @@
 @import (reference) "../app-core-styles/styles/variables";
 @import (once) "../app-core-styles/app-core-styles";
 
+.app-header {
+	padding: 1em 0;
+	nav{
+		.clearfix;
+	}
 
-.app-header{
 	a:link, a:visited {
 		color: #fff;
 	}
 	a:hover {
 		color: darken(#fff, 20%);
 	}
-	ul{
-		padding:0;
-		margin:0;
-		li{
+	ul {
+		padding: 0;
+		margin: 0;
+		text-align: right;
+		li {
 			display: inline-block;
+			margin-left: 1em;
+			font-size: 1em;
+			height: 100%;
+			vertical-align: middle;
+			&:first-child{
+				margin-left: 0;
+			}
+			@media(@xs){
+				margin-left: 2em;
+				font-size: 1.2em;
+			}
+			a{
+				line-height: 1.3em;
+				@media(@xs){
+					line-height: 3.5em;
+				}
+				
+			}
 		}
 	}
-	padding:1em 0;
+	.logo {
+		float: left;
+		@media(@none){
+			width: 2.3em;
+		}
+		@media(@xs){
+			width: auto;
+		}
+	}
+	figure{
+		width: 100%;
+		margin:0;
+		text-align: left;
+		display: inline-block;
+		@media(@xs){
+			margin:0 auto;
+			width: 100%;
+			text-align: center;
+		}
+		img{
+			width: 100%;
+			@media(@xs){
+				width: 50%;
+				margin-bottom: .3em;
+			}
+		}
+	}
+	figcaption{
+		text-transform: uppercase;
+		font-family: @semibold-font;
+		text-align: center;
+		font-size: 1em;
+
+		@media(@none){
+			display: none;
+		}
+		@media(@xs){
+			font-size: 1.3em;
+			display: block;
+		}
+	}
 }
+
 /* /app-header component */
