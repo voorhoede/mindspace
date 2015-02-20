@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="314px" height="409px" viewBox="0 0 314 409" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>B005_beta_xs</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Caroussel-planeten2" sketch:type="MSArtboardGroup" transform="translate(-1180.000000, -328.000000)">
+            <g id="B005_beta_xs" sketch:type="MSLayerGroup" transform="translate(1180.000000, 326.000000)">
+                <text id="Planet-Beta" opacity="0.25495569" sketch:type="MSTextLayer" font-family="Proxima Nova" font-size="24" font-weight="526" sketch:alignment="middle" line-spacing="38" fill="#FFFFFF">
+                    <tspan x="105.188" y="398">Planet Beta</tspan>
+                </text>
+                <g id="Group" transform="translate(0.750000, 0.165033)" sketch:type="MSShapeGroup">
+                    <g transform="translate(0.209116, 2.808036)">
+                        <ellipse id="Oval-93" fill="#8B293F" transform="translate(156.196987, 156.196987) scale(-1, 1) translate(-156.196987, -156.196987) " cx="156.196987" cy="156.196987" rx="156.196987" ry="156.196987"></ellipse>
+                        <ellipse id="Oval-94" fill="#AC3852" transform="translate(162.306488, 148.535060) scale(-1, 1) translate(-162.306488, -148.535060) " cx="162.306488" cy="148.53506" rx="142.736564" ry="142.736564"></ellipse>
+                        <path id="Path-324" stroke="#979797" stroke-width="0.6" d=""></path>
+                    </g>
+                    <ellipse id="Oval-1490" opacity="0.32083722" fill="#E4D4BA" cx="198.175633" cy="91.9631696" rx="57.5647321" ry="41.4185268"></ellipse>
+                    <path d="M89.4195071,144.704034 C116.023816,129.957025 129.542378,103.48235 119.614061,85.5711915 C109.685744,67.6600332 80.070199,65.0949835 53.4658902,79.8419927 C26.8615815,94.5890018 13.3430193,121.063677 23.2713365,138.974836 C33.1996536,156.885994 62.8151984,159.451044 89.4195071,144.704034 L89.4195071,144.704034 Z" id="Oval-1493" opacity="0.32083722" fill="#D47D87"></path>
+                    <ellipse id="Oval-1490" opacity="0.32083722" fill="#D47D87" cx="158.161124" cy="248.511161" rx="42.8225446" ry="26.6763393"></ellipse>
+                    <ellipse id="Oval-1491" opacity="0.32083722" fill="#FEDEA6" cx="252.290022" cy="183.926339" rx="21.1676871" ry="52.5131117"></ellipse>
+                    <path d="M129.523228,193.666485 C143.113573,187.038031 151.237342,175.732295 147.668174,168.414417 C144.099007,161.096539 130.188473,160.53765 116.598128,167.166104 C103.007783,173.794558 94.884014,185.100294 98.4531817,192.418173 C102.022349,199.736051 115.932883,200.294939 129.523228,193.666485 L129.523228,193.666485 Z" id="Oval-1492" opacity="0.32083722" fill="#FEDEA6"></path>
+                    <path d="M137.688702,47.7212139 C145.045074,47.3356828 150.745405,42.0012382 150.420747,35.8063984 C150.096089,29.6115587 143.869384,24.9021836 136.513012,25.2877147 C129.156639,25.6732458 123.456309,31.0076904 123.780966,37.2025301 C124.105624,43.3973699 130.332329,48.106745 137.688702,47.7212139 L137.688702,47.7212139 Z" id="Oval-1492" opacity="0.32083722" fill="#FEDEA6"></path>
+                    <path d="M199.465487,195.143089 C206.821859,194.757558 212.52219,189.423113 212.197532,183.228273 C211.872875,177.033434 205.64617,172.324059 198.289797,172.70959 C190.933425,173.095121 185.233094,178.429565 185.557752,184.624405 C185.88241,190.819245 192.109115,195.52862 199.465487,195.143089 L199.465487,195.143089 Z" id="Oval-1492" opacity="0.32083722" fill="#FEDEA6"></path>
+                </g>
+                <circle id="Oval-2529" opacity="0.5" fill="#FFFFFF" sketch:type="MSShapeGroup" transform="translate(76.250000, 221.235923) scale(-1, 1) translate(-76.250000, -221.235923) " cx="76.25" cy="221.235923" r="7.5"></circle>
+                <path d="M76.3730469,228.576026 L76.3730469,409.117042 L227.981958,409.117042" id="Path-856" stroke="#FFFFFF" stroke-width="2" opacity="0.5" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
