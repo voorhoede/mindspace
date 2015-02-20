@@ -7,9 +7,12 @@
 
 {% block content %}
     <!-- mindspace view -->
-    {% include "components/intro/intro.html" %}
-
-    {% include "components/whatis/whatis.html" %}
+    <div class="intro-wrapper">
+        {% include "components/intro/intro.html" %}
+    </div>
+    <div class="whatis-wrapper">
+        {% include "components/whatis/whatis.html" %}
+    </div>
 
     {{testimonial('Daan van Klinken',
                 'interaction designer at UNITiD',

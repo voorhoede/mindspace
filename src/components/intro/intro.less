@@ -9,11 +9,9 @@
 	.video-container{
 		margin: 0 auto;
 		@media(@xs){
-			width: 70%;
+			width: 80%;
 		}
-		@media(@sm){
-			width: 50%;
-		}
+	
 		img, video{
 			width: 100%;
 			height: auto;
@@ -21,7 +19,8 @@
 	}
 
 	.learn-more{
-		margin: .8em auto 0 auto;
+		margin: 1em auto 0 auto;
+		font-size: 1.4em;
 
 		a:link, a:visited {
 			color: #fff;
@@ -29,6 +28,26 @@
 		a:hover {
 			color: darken(#fff, 20%);
 		}
+	}
+
+	.contained{
+		margin: .8em auto;
+		@media(@xs){
+			width: 60%;
+		}
+	}
+
+	.claim{
+		line-height: 1.5em;
+		@media(@xs){
+			font-size: 1.2em;
+			padding:0 1em;
+		}
+		@media(@sm){
+			font-size: 1.6em;
+		}
+		
+		
 	}
 }
 /* /intro component */
