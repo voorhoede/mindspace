@@ -17,16 +17,14 @@
 // Body reset
 
 html {
-	font-size: 10px;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	font-size: 16px;
 	margin: 0;
 	padding: 0;
 }
 
 body {
 	font-family: Arial;
-	font-size: 1.2em;
-	line-height: 1.5em;
+	line-height: 1.2em;
 	color: #fff;
 	width: 100%;
 	padding: 0;
@@ -51,12 +49,14 @@ a:focus {
 a:active {
 
 }
-
 main section,
 .header-wrapper nav{
 	margin: 0 auto;
 	padding:0 1.5em;
 	@media(@sm){
-		max-width: 850px;
+		max-width: 800px;
+	}
+	@media(@md){
+		max-width: 960px;
 	}
 }

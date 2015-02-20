@@ -27,51 +27,39 @@
 body {
 	color: #fff;
 	font-family: @light-font;
-	font-size: 16px; //24
-	line-height: 26px; //39
-
-	@media(@md) {
-		font-size: 24px;
-		line-height: 39px;
-	}
+	font-size: 1em;
+	line-height: 1.2em;
 }
 
 h1 {
-	color: @primary-font-color;
+	color: #fff;
 	font-family: @semibold-font; //should be semibold
-	font-size:  21px; //42
-	font-weight: normal;
-	line-height: 29px; //58
-
+	line-height: 1.5em;
+	@media(@xs){
+		font-size: 1.7em;
+	}
 	@media(@md) {
-		font-size: 42px;
-		line-height: 58px;
+		font-size: 2.1em;
 	}
 }
 
 h2 {
 	color: @primary-font-color;
 	font-family: @semibold-font;
-	font-size: 16px; //32
 	font-weight: normal;
-	line-height: 22px; //44
 
 	@media(@md) {
-		font-size: 32px;
-		line-height: 44px;
+		
 	}
 }
 
 h3 {
 	color: #4A4A4A;
 	font-family: @semibold-font;
-	font-size: 18px; //24
 	font-weight: normal;
-	line-height: 39px; //39
 
 	@media(@md) {
-		font-size: 24px;
-		line-height: 39px;
+		
 	}
 }
 
@@ -79,16 +67,8 @@ h3 {
 	color: #4A4A4A;
 	font-family: @written-font;
 	font-size: 32px; //32
-	line-height: 54px; //54
 }
-
-.section-title {}
-.section-subtitle {}
 
 .footer-section .section-title {
 	color: #fff;
-}
-
-.footer-section .section-subtitle {
-
 }

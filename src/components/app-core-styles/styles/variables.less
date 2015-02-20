@@ -2,6 +2,7 @@
 @background: #001730;
 
 // breakpoints
+@breakpoint-none: 0px;
 @breakpoint-small: 400px;
 @breakpoint-between: 568px;
 @breakpoint-medium: 800px;
@@ -10,10 +11,13 @@
 
 //mediaquery mixin
 //usage: @media(@xs){}
+@none: ~'min-width: @{breakpoint-none}';
 @xxs: ~'min-width: @{breakpoint-small}';
 @xs:  ~'min-width: @{breakpoint-between}';
 @sm:  ~'min-width: @{breakpoint-medium}';
 @md:  ~'min-width: @{breakpoint-large}';
+@xl:  ~'min-width: @{breakpoint-xlarge}';
+
 
 // colors:
 @primary-font-color:	#256FB7;
