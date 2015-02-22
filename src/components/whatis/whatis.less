@@ -2,68 +2,75 @@
 @import (once) "../app-core-styles/app-core-styles";
 
 @keyframes hover {
-	0% {transform: translate(-50%, 0);}
-	50% {transform: translate(-50%, 4%);}
-	100% {transform: translate(-50%, 0);}
+	0% {transform: translateY(0);}
+	50% {transform: translateY(4%);}
+	100% {transform: translateY(0);}
 }
 
 @-webkit-keyframes hover {
-	0% {transform: translate(-50%, 0);}
-	50% {transform: translate(-50%, 4%);}
-	100% {transform: translate(-50%, 0);}
+	0% {transform: translateY(0);}
+	50% {transform: translateY(4%);}
+	100% {transform: translateY(0);}
 }
 @-moz-keyframes hover {
-	0% {transform: translate(-50%, 0);}
-	50% {transform: translate(-50%, 4%);}
-	100% {transform: translate(-50%, 0);}
+	0% {transform: translateY(0);}
+	50% {transform: translateY(4%);}
+	100% {transform: translateY(0);}
 }
 
 @keyframes scale-shadow {
-	0% {transform: translate(-50%, 0%);}
-	50% {transform: translateX(-50%) scaleX(1.2) translateY(-10%);}
-	100% {transform: translate(-50%, 0%);}
+	0% {transform: scaleX(1) translateY(0%);}
+	50% {transform: scaleX(1.1) translateY(-10%);}
+	100% {transform: scaleX(1) translateY(0%);}
 }
 
 @-webkit-keyframes scale-shadow {
-	0% {transform: translate(-50%, 0%);}
-	50% {transform: translateX(-50%) scaleX(1.2) translateY(-10%);}
-	100% {transform: translate(-50%, 0%);}
+	0% {transform: scaleX(1) translateY(0%);}
+	50% {transform: scaleX(1.1) translateY(-10%);}
+	100% {transform: scaleX(1) translateY(0%);}
 }
 @-moz-keyframes scale-shadow {
-	0% {transform: translate(-50%, 0%);}
-	50% {transform: translateX(-50%) scaleX(1.2) translateY(-10%);}
-	100% {transform: translate(-50%, 0%);}
+	0% {transform: scaleX(1) translateY(0%);}
+	50% {transform: scaleX(1.1) translateY(-10%);}
+	100% {transform: scaleX(1) translateY(0%);}
 }
 
 /* whatis component */
 .whatis {
+	img{
+		width: 100%;
+		height: auto;
+	}
 	// add style rules for component within `.whatis` namespace.
 	.whatis-ufo-container{
-		position: relative;
-		img{
-			width: 100%;
-			height: auto;
-		}
+		padding:2em;	
 	}
 	.whatis-ufo{
-		left:50%;
 		width: 60%;
-		-moz-transform: translate(-50%, 0);
-		transform: translate(-50%, 0);
-		position: absolute;
+		margin:0 auto;
 		-moz-animation:hover 5s linear infinite;
 		-webkit-animation:hover 5s linear infinite;
 		animation:hover 5s linear infinite;
 	}
 	.whatis-ufo-shadow{
-		-moz-transform: translate(-50%, -10%);
-		transform: translate(-50%, -10%);
-		width: 50%;
+		width: 33%;
 		left:50%;
+		margin-left: -17%;
 		position: absolute;
 		-moz-animation:scale-shadow 5s linear infinite;
 		-webkit-animation:scale-shadow 5s linear infinite;
 		animation:scale-shadow 5s linear infinite;
+	}
+	h2{
+		text-align: center;
+	}
+
+	ul{
+		list-style: none;
+		padding-left: 0;
+		li{
+			
+		}
 	}
 }
 /* /whatis component */
