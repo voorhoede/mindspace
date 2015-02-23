@@ -19,6 +19,8 @@
                 'Keeping notes during a design discussion is now just one shortcut away',
                 'A010_photo@2x.jpg')}}
 
+    {% include "components/timeline/timeline.html" %}
+
     {{testimonial('Jimmy Goedhart',
                 'visual designer at UNITiD',
                 'It’s exciting to be part of this project. Especially with the powerful
@@ -34,10 +36,12 @@
         'B012_photo@2x.jpg')}}
 
     {% include "components/form-beta-tester/form-beta-tester.html" %}
+
     <div class="member-head">
         <img src="{{paths.assets}}images/C008_landscape.svg"
             onerror="this.src='{{ paths.assets }}images/C008_landscape@2x.png'">
     </div>
+
     <div class="member-wrapper">
         {% include "components/member-section/member-section.html" %}
     </div>

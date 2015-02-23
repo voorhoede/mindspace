@@ -1,0 +1,74 @@
+@import (reference) "../app-core-styles/styles/variables";
+@import (once) "../app-core-styles/app-core-styles";
+
+/* timeline component */
+.timeline {
+
+	img {
+		max-width: 100%;
+		margin: 0 auto;
+		display: block;
+
+		@media (@xs){
+			max-width: 60%;
+		}
+	}
+	.step-navigation {
+		display: none;
+	}
+	@media (@sm){
+		.step-navigation {
+			margin-top: 50px;
+			display: table;
+		}
+	}
+
+	.list-title {
+		color: @primary-font-color;
+		margin-bottom: 0;
+	}
+	.list-paragraph {
+		margin: 0;
+	}
+}
+
+.time-line-list {
+	counter-reset: timeline;
+	margin-top: 100px;
+
+	li {
+		position: relative;
+		padding-left: 30px;
+
+		&:before {
+			content: counter(timeline);
+			counter-increment: timeline;
+			position: absolute;
+			left: 0;
+			border: 2px solid @white;
+			border-radius: 100%;
+			width: 25px;
+			height: 25px;
+			text-align: center;
+		}
+	}
+	@media(@sm) {
+		margin-top: 0;
+		li {
+			width: 30%;
+			display: inline-block;
+			margin-left: 2%;
+			text-align: center;
+			vertical-align: top;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:before {
+				content: none;
+			}
+		}
+	}
+}
+/* /timeline component */

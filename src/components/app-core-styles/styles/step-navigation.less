@@ -1,0 +1,70 @@
+@import "variables";
+
+.step-navigation {
+	width: 100%;
+	margin: 0 auto;
+	display: table;
+	table-layout: fixed;
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+
+	// We use a display: table and table-cell to equally divide the width of the <li> elements, without hard-coding widths.
+	.step {
+		display: table-cell;
+		text-align: center;
+		position: relative;
+		vertical-align: middle;
+
+		.label {
+			text-decoration: none;
+			color: @white;
+			display: block; // make the whole <a> element clickable.
+
+			// Show the number on top of the .label.
+			&:before {
+				content: attr(data-content);
+				position: relative;
+				margin: 0 auto 15px;
+				width: 34px;
+				height: 34px;
+				display: block;
+
+				border: 2px solid @white;
+				border-radius: 50%;
+
+				background: #001730;
+				z-index: 220;
+
+				font-size: 22px;
+				font-family: @semibold-font;
+				font-weight: bold;
+				line-height: 36px;
+
+				// make sure the number remains visible, even if the .label itself isn't.
+				visibility: visible;
+			}
+
+			// Show the lines between the numbers
+			&:after {
+				content: '';
+				width: 100%;
+				position: absolute;
+				height: 3px;
+				left: -50%;
+				top: 18px;
+				background: @white;
+				// put it behind the numbers
+				z-index: 200;
+
+				// make sure the line remains visible, even if the .label itself isn't.
+				visibility: visible;
+			}
+		}
+
+		// Remove the line from the first link.
+		&:first-child .label:after {
+			content: none;
+		}
+	}
+}
