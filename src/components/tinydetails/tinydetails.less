@@ -3,10 +3,19 @@
 
 /* tinydetails component */
 .tinydetails {
-
-	.is-expandible .expandible-handle,
-	.is-expandible .expandible-handle-inline {
+	h2{
+		text-align: center;
+	}
+	.panel{
+		border-bottom: 1px solid #fff;
+		margin-top: 2em;
+		padding-bottom: .5em;
+	}
+	.panel-heading{
 		cursor: pointer;
+		h3{
+			color:#fff;
+		}
 	}
 	.expandible-handle.is-expandible .expandible-content {
 		display: none;
@@ -15,16 +24,21 @@
 		display: block;
 	}
 
-	.expandible-handle, .expandible-content {
+	.panel-heading, .expandible-content {
 		position: relative;
 		&:before {
+			font-family: @light-font;
+			color:@primary-font-color;
 			display: block;
 			position: absolute;
-			left: -1.5em;
+			left: -1.2em;
+			font-size: 2em;
+			top:50%;
+			margin-top:-.3em;
 		}
 	}
 
-	.expandible-handle:before {
+	.panel-heading:before {
 		content: 'Q';
 	}
 
@@ -32,6 +46,11 @@
 		content: 'A';
 	}
 
+	.expandible-container{
+		margin-left:2.3em;
+
+	font-family: @light-font;
+	}
 }
 
 /* /tinydetails component */

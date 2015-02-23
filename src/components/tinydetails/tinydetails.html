@@ -1,6 +1,6 @@
 {% macro faqItem(question, answer, expanded='is-expandable') %}
     <div class="expandible-handle panel panel-default {{expanded}}" data-expandible>
-        <div class="panel-heading expandible-handle"
+        <div class="panel-heading"
              data-expandible-handle="toggle">
             <h3 class="panel-title">{{question}}</h3>
         </div>
@@ -16,9 +16,14 @@
     <section>
         <h2>The tiny details</h2>
 
-        <div>
+        <div class="expandible-container">
             {{faqItem('When will I be able to use the first beta version?',
-                    'lorem',
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                     'is-expanded')}}
             {{faqItem('Where can I see the progress?','Lorem ipsum ')}}
             {{faqItem('What are the system requirements? ','Lorem ipsum ')}}
