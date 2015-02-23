@@ -14,7 +14,7 @@
 {% endmacro %}
 
 {% macro facebook(url) %}
-<a class="social-icon facbook" href="https://www.facebook.com/sharer/sharer.php?u={{ url | urlencode }}">
+<a class="social-icon facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ url | urlencode }}">
     Facebook
 </a>
 {% endmacro %}
@@ -32,9 +32,9 @@
 {% endmacro %}
 
 <section class="form-beta-tester" data-component="form-beta-tester">
-    <form>
-        <img src="ufo.jpg" alt="Big ufo">
-        <div class="form-part visible form-step-signup" data-form-part="1">
+    <img src="/assets/images/C001_ufo.png" class="ufo-image" alt="Big ufo">
+    <form class="moon-part">
+        <div class="form-part form-step-signup" data-form-part="1">
             <h2 class="section-title">We need you as a beta tester!</h2>
             <span class="section-subtitle"><strong>Become one of the 100 lucky co-pilots by pledging $ 4.50. Every single one of you will get:</strong></span>
 
@@ -47,51 +47,48 @@
 
             <input type="text" placeholder="Name" name="name">
             <input type="text" placeholder="Email" name="email">
-            <div class="custom-selectbox">
-                <input type="hidden" name="country" id="country">
-                <div class="fake-input">Country</div>
-                <ul class="fake-select-section">
-                    {{ countrySelect('Nederland', '1') }}
-                    {{ countrySelect('Nederland', '2') }}
-                </ul>
-            </div>
+            <select>
+                <option value="">Country</option>
+                <option value="nl">Netherlands</option>
+                <option value="a">A country</option>
+                <option value="a">A country</option>
+            </select>
             <button data-form-handle="next"> Sign up </button>
         </div>
 
-        <div class="form-part form-step-avatar" data-form-part="2">
+        <div class="form-part form-step-avatar " data-form-part="2">
             <h2 class="section-title">Awesome, thanks for your support!</h2>
             <span class="section-subtitle"><strong>Ready for the spotlight? </strong></span>
             <p> Complete your registration by selecting your funky suit.</p>
 
-            <ul>
-                {{ avatar('1', 'avatar.jpg', 'A funky name') }}
-                {{ avatar('1', 'avatar.jpg', 'A funky name') }}
-                {{ avatar('1', 'avatar.jpg', 'A funky name') }}
-                {{ avatar('1', 'avatar.jpg', 'A funky name') }}
-                {{ avatar('1', 'avatar.jpg', 'A funky name') }}
-                {{ avatar('1', 'avatar.jpg', 'A funky name') }}
+            <ul class="avatar-select flat-list">
+                {{ avatar('1', 'http://lorempixel.com/100/100/people', 'A funky name') }}
+                {{ avatar('2', 'http://lorempixel.com/100/100/people', 'A funky name') }}
+                {{ avatar('3', 'http://lorempixel.com/100/100/people', 'A funky name') }}
+                {{ avatar('4', 'http://lorempixel.com/100/100/people', 'A funky name') }}
+                {{ avatar('5', 'http://lorempixel.com/100/100/people', 'A funky name') }}
+                {{ avatar('6', 'http://lorempixel.com/100/100/people', 'A funky name') }}
             </ul>
             <button data-form-handle="next"> Next </button>
         </div>
 
-        <div class="form-part form-step-thankyou" data-form-part="3">
+        <div class="form-part form-step-thankyou visible" data-form-part="3">
             <h2 class="section-title">Ready for take-off!</h2>
             <span class="section-subtitle"><strong>What’s next?</strong></span>
 
-            <ul>
+            <ul class="flat-list">
                 <li>We will keep you up to date about the process</li>
                 <li>You will recieve an email confirmation with your receipt</li>
             </ul>
 
-            <p>Tell others about Mindspace and help us find the remaining [78] co-pilots!</p>
+            <p><strong>Tell others about Mindspace and help us <br> find the remaining [78] co-pilots!</strong></p>
 
-            <ul data-component="social-share">
+            <ul class="social-share flat-list" data-component="social-share">
                 <li>{{ facebook(pkg.homepage) }}</li>
                 <li>{{ linkedIn(pkg.homepage, pkg.name, pkg.description, 'De Voorhoede') }}</li>
                 <li>{{ twitter(pkg.homepage, pkg.description) }}</li>
             </ul>
 
-            <button data-form-handle="submit"> Next </button>
         </div>
         </form>
     </form>

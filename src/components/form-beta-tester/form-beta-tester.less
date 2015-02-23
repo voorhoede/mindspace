@@ -3,30 +3,149 @@
 
 /* form-beta-tester component */
 .form-beta-tester {
-	background: #E8E8E8;
-	border-radius: 100%;
-	color: #4A4A4A;
-	padding: 0 30px;
+	padding: 60px 0 0 0;
+	position: relative;
 
-	.member-list{
-		padding-left:0;
+	@media (@sm) {
+		padding: 140px 0 0 0;
+	}
+
+	.moon-part {
+		background: #F3F3F3;
+		color: #4A4A4A;
+		padding: 0 30px;
+		position: relative;
+		text-align: center;
+		margin: 40px auto;
+		width: 100%;
+
+		@media (@sm) {
+			border-radius: 100%;
+			margin: 0 auto 40px;
+			max-width: 800px;
+		}
+		@media (@sm) {
+			&:before {
+				background: #E8E8E8;
+				border-radius: 100%;
+				content: '';
+				height: 103%;
+				left: -10px;
+				margin: 0 auto 40px;
+				max-width: 800px;
+				position: absolute;
+				top: 1px;
+				width: 102%;
+				z-index: -1;
+			}
+		}
+	}
+
+	.ufo-image {
+		height: auto;
+		right: 10%;
+		position: absolute;
+		top: 16px;
+		width: 200px;
+		z-index: 1;
+
+		@media (@sm) {
+			left: 35%;
+			width: 30%;
+		}
+	}
+
+	.member-list {
+		padding-left: 0;
 	}
 
 	.form-part {
 		display: none;
 		font-size: 14px;
 		margin: 0 auto;
-		padding: 20px 0;
+		max-width: 400px;
+		padding: 15% 0;
+		text-align: right;
 
 		&.visible {
 			display: block;
 		}
 	}
 
+	.form-step-avatar {
+		padding: 24% 0;
+		max-width: 600px;
+		text-align: center;
+	}
+
+	.avatar-select {
+		margin-bottom: 3em;
+
+		li {
+			display: inline-block;
+			height: 90px;
+			text-align: center;
+			width: 90px;
+		}
+
+		img {
+			border-radius: 100%;
+			margin: 0 auto;
+			width: 90%;
+		}
+	}
+
+	.form-step-thankyou {
+		padding: 24% 0;
+		text-align: center;
+
+		.flat-list {
+			margin-bottom: 3em;
+		}
+	}
+	.social-share {
+		margin-top: 3em;
+
+		li {
+			display: inline-block;
+			height: 80px;
+			width: 80px;
+		}
+	}
+	.social-icon {
+		border-radius: 100%;
+		background: url('http://lorempixel.com/100/100/people');
+		width: 60px;
+		height: 60px;
+		display: block;
+		margin: 0 auto;
+		text-indent: -9999px;
+	}
+
+	.facebook {}
+	.linkedin {}
+	.twitter {}
+
 	.section-title,
 	.section-subtitle {
 		display: block;
 		text-align: center;
+	}
+
+	.section-subtitle {
+		margin-bottom: 2em;
+	}
+
+	.icon-list {
+		margin-bottom: 2.5em;
+		text-align: left;
+	}
+
+	button {
+		font-family: @light-font;
+		font-size: 16px;
+		line-height: normal;
+		padding: 10px 30px;
 	}
 }
 /* /form-beta-tester component */
