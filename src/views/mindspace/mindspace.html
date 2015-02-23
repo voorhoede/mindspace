@@ -26,7 +26,10 @@
         Now we finally ha ve the opportunity to build it ourselves!')}}
 
     {% include "components/form-beta-tester/form-beta-tester.html" %}
-
+    <div class="member-head">
+        <img src="{{paths.assets}}images/C008_landscape.svg"
+            onerror="this.src='{{ paths.assets }}images/C008_landscape@2x.png'">
+    </div>
     <div class="member-wrapper">
         {% include "components/member-section/member-section.html" %}
     </div>

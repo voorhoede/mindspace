@@ -2,14 +2,17 @@
 
 <!-- member-section component -->
 <section class="member-section" data-component="member-section">
-    <header class="member-header">
-        <img src="space-ship.png" alt="Spaceship with path">
-        <div class="gate-keeper">
-            <span class="member-count">76</span>
-            <img src="gate.png" alt="Gate">
+    <div class="gate-keeper">
+        <div class="launchbase">
+            <img src="{{ paths.assets }}images/C006_launchbase.svg" alt="Spaceship with path"
+            onerror="this.src='{{ paths.assets }}images/C006_launchbase@2x.png'">
         </div>
-    </header>
-
+        <div class="sign">
+            <span class="member-count">76</span>
+            <img src="{{paths.assets}}images/C007_sign.svg"
+            onerror="this.src='{{ paths.assets }}images/C007_sign@2x.png'">
+        </div>
+    </div>
     <div class="member-content" data-content-loader>
         <h2 class="section-title">Become a co-pilot!</h2>
         <ul class="member-list" data-content-loader-list>
@@ -31,7 +34,6 @@
             {{ member( name='Anonymous', image='http://lorempixel.com/100/100/people') }}
             {{ member( name='Anonymous', image='http://lorempixel.com/100/100/people') }}
         </ul>
-
         <button class="sand" data-content-loader-handle>Load more</button>
     </div>
 </section>
