@@ -49,13 +49,10 @@
 			max-width: 900px;
 		}
 	}
+
 	.moon-content {
-		max-width: 600px;
 		margin: 0 auto;
-	}
-
-	.whatis-ufo {
-
+		max-width: 600px;
 	}
 
 	.whatis-ufo img {
@@ -64,33 +61,34 @@
 	}
 
 	.whatis-ufo-container {
-		position: absolute;
-		width: 60%;
-		top: -60px;
 		left: 20%;
+		top: -60px;
+		width: 60%;
+		position: absolute;
 
 		@media (@xs){
-			top: -120px;
 			left: 30%;
+			top: -120px;
 			width: 40%;
 		}
-
 	}
+
 	.whatis-ufo {
-		width: 100%;
-		margin:0 auto;
 		-moz-animation:hover 5s linear infinite;
 		-webkit-animation:hover 5s linear infinite;
 		animation:hover 5s linear infinite;
+		margin:0 auto;
+		width: 100%;
 	}
+
 	.whatis-ufo-shadow {
-		width: 33%;
-		left:50%;
-		margin-left: -17%;
-		position: absolute;
 		-moz-animation:scale-shadow 5s linear infinite;
 		-webkit-animation:scale-shadow 5s linear infinite;
 		animation:scale-shadow 5s linear infinite;
+		left:50%;
+		margin-left: -17%;
+		position: absolute;
+		width: 33%;
 	}
 
 	h2 {
@@ -99,40 +97,41 @@
 
 	.whatis-list {
 		counter-reset: section;
+
 		li {
-			position: relative;
 			padding-top: 138px;
+			position: relative;
 
 			@media (@sm) {
-				padding-top: 0;
 				padding-left: 220px;
+				padding-top: 0;
 				margin-bottom: 3em;
 				min-height: 128px;
 			}
 		}
 	}
+
 	.list-subtitle {
 		color: @primary-font-color;
 		font-family: @light-font;
 		margin: 0;
 	}
-	.list-paragraph {
 
-	}
 	.list-image {
-		position: absolute;
-		max-width: 220px;
 		display: inline-block;
 		left: 0;
+		max-width: 220px;
+		position: absolute;
 		top: 0;
 
 	}
+
 	.list-content {
-		position: relative;
-		max-width: 100%;
 		display: block;
-		text-align: left;
+		max-width: 100%;
 		padding-left: 20px;
+		position: relative;
+		text-align: left;
 
 		@media (@sm) {
 			max-width: 320px;
@@ -140,17 +139,14 @@
 
 		&:before {
 			color: @primary-font-color;
+			content: counter(section);
+			counter-increment: section;
 			font-family: @semibold-font;
 			font-size: 18px;
-			counter-increment: section;
-			content: counter(section);
-			position: absolute;
 			left: 0;
+			position: absolute;
 			top: 0;
-
 		}
 	}
-
-
 }
 /* /whatis component */
