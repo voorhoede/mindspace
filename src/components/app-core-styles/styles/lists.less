@@ -53,6 +53,7 @@
 	}
 	.member-name {
 		font-family: @semibold-font;
+		display: block;
 	}
 	.member-residence {
 		font-family: @light-font;
@@ -75,7 +76,7 @@
 
 		&:before {
 			position: absolute;
-			content: 'I';
+			content: '';
 			display: block;
 			width: 12px;
 			height: 12px;
@@ -89,5 +90,5 @@
 	content: '';
 	background: url('images/C003_icon-check.png') no-repeat top left;
 	top: 7px;
-
+	background-size: 80%;
 }

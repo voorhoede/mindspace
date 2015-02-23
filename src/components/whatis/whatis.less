@@ -48,6 +48,9 @@
 		&:before {
 			max-width: 900px;
 		}
+		@media (@sm){
+			width: 95%;
+		}
 	}
 
 	.moon-content {
@@ -99,13 +102,14 @@
 		counter-reset: section;
 
 		li {
-			padding-top: 138px;
-			position: relative;
+			margin-bottom: 3em;
 
 			@media (@sm) {
+				position: relative;
+				padding-top: 138px;
 				padding-left: 220px;
 				padding-top: 0;
-				margin-bottom: 3em;
+
 				min-height: 128px;
 			}
 		}
@@ -119,11 +123,14 @@
 
 	.list-image {
 		display: inline-block;
-		left: 0;
 		max-width: 220px;
-		position: absolute;
-		top: 0;
+		margin-bottom: 1em;
 
+		@media (@sm) {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 	}
 
 	.list-content {
