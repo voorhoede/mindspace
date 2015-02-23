@@ -1,17 +1,17 @@
 <!-- testimonial macro -->
-{% macro testimonial(name, position, quote) %}
+{% macro testimonial(name, position, quote, image) %}
 <div class="testimonial" data-component="testimonial">
     <section>
         <h2>Team Mindspace</h2>
+        <blockquote>
+            &ldquo;{{quote}}.;&rdquo;
+        </blockquote>
         <figure>
-            <img src="" alt="" title=""/>
+            <img src="{{paths.assets}}images/{{image}}" alt="picture of quoted author"/>
             <figcaption>
                 <em>{{name}}</em>, {{position}}
             </figcaption>
         </figure>
-        <blockquote>
-            &ldquo;{{quote}}.;&rdquo;
-        </blockquote>
     </section>
 </div>
 {% endmacro %}

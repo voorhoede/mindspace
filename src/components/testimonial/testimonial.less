@@ -1,8 +1,39 @@
+@import (reference) "../app-core-styles/styles/mixins/clearfix";
 @import (reference) "../app-core-styles/styles/variables";
 @import (once) "../app-core-styles/app-core-styles";
 
 /* testimonial component */
 .testimonial {
 	// add style rules for component within `.testimonial` namespace.
+	.clearfix;
+	padding:3em 0;
+	h2{
+		text-align: left;
+	}
+	figure{
+		margin:0;
+		img{
+			float:right;
+			margin-left: 1em;
+			margin-top:-1em;
+			width: 17%;
+			height: auto;
+			border-radius: 50%;
+			@media(@sm){
+				margin-top:-3em;
+			}
+		}
+	}
+	figcaption{
+		margin-top: 1em;
+	}
+	blockquote{
+		font-size: 1.3em;
+		line-height: 1.6em;
+		margin:0;
+		@media(@sm){
+			width: 80%;
+		}
+	}
 }
 /* /testimonial component */
