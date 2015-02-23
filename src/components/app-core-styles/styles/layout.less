@@ -2,3 +2,34 @@
 html {
 	background: @background;
 }
+
+.moon-part {
+	background: #F3F3F3;
+	color: #4A4A4A;
+	padding: 0 30px;
+	position: relative;
+	text-align: center;
+	margin: 40px auto;
+	width: 100%;
+
+	@media (@sm) {
+		border-radius: 100%;
+		margin: 0 auto 40px;
+		max-width: 800px;
+	}
+	@media (@sm) {
+		&:before {
+			background: #E8E8E8;
+			border-radius: 100%;
+			content: '';
+			height: 103%;
+			left: -10px;
+			margin: 0 auto 40px;
+			max-width: 800px;
+			position: absolute;
+			top: 1px;
+			width: 102%;
+			z-index: -1;
+		}
+	}
+}

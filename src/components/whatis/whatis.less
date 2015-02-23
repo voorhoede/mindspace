@@ -35,24 +35,55 @@
 	100% {transform: scaleX(1) translateY(0%);}
 }
 
+
 /* whatis component */
 .whatis {
-	img{
+	font-family: @light-font;
+	margin-top: 150px;
+
+	.moon-part {
+		max-width: 900px;
+		padding: 100px 0;
+
+		&:before {
+			max-width: 900px;
+		}
+	}
+	.moon-content {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.whatis-ufo {
+
+	}
+
+	.whatis-ufo img {
 		width: 100%;
 		height: auto;
 	}
-	// add style rules for component within `.whatis` namespace.
-	.whatis-ufo-container{
-		padding:2em;	
-	}
-	.whatis-ufo{
+
+	.whatis-ufo-container {
+		position: absolute;
 		width: 60%;
+		top: -60px;
+		left: 20%;
+
+		@media (@xs){
+			top: -120px;
+			left: 30%;
+			width: 40%;
+		}
+
+	}
+	.whatis-ufo {
+		width: 100%;
 		margin:0 auto;
 		-moz-animation:hover 5s linear infinite;
 		-webkit-animation:hover 5s linear infinite;
 		animation:hover 5s linear infinite;
 	}
-	.whatis-ufo-shadow{
+	.whatis-ufo-shadow {
 		width: 33%;
 		left:50%;
 		margin-left: -17%;
@@ -61,16 +92,65 @@
 		-webkit-animation:scale-shadow 5s linear infinite;
 		animation:scale-shadow 5s linear infinite;
 	}
-	h2{
+
+	h2 {
 		text-align: center;
 	}
 
-	ul{
-		list-style: none;
-		padding-left: 0;
-		li{
-			
+	.whatis-list {
+		counter-reset: section;
+		li {
+			position: relative;
+			padding-top: 138px;
+
+			@media (@sm) {
+				padding-top: 0;
+				padding-left: 220px;
+				margin-bottom: 3em;
+				min-height: 128px;
+			}
 		}
 	}
+	.list-subtitle {
+		color: @primary-font-color;
+		font-family: @light-font;
+		margin: 0;
+	}
+	.list-paragraph {
+
+	}
+	.list-image {
+		position: absolute;
+		max-width: 220px;
+		display: inline-block;
+		left: 0;
+		top: 0;
+
+	}
+	.list-content {
+		position: relative;
+		max-width: 100%;
+		display: block;
+		text-align: left;
+		padding-left: 20px;
+
+		@media (@sm) {
+			max-width: 320px;
+		}
+
+		&:before {
+			color: @primary-font-color;
+			font-family: @semibold-font;
+			font-size: 18px;
+			counter-increment: section;
+			content: counter(section);
+			position: absolute;
+			left: 0;
+			top: 0;
+
+		}
+	}
+
+
 }
 /* /whatis component */
