@@ -19,24 +19,30 @@
                 'Keeping notes during a design discussion is now just one shortcut away',
                 'A010_photo@2x.jpg')}}
 
-    {% include "components/timeline/timeline.html" %}
+    <div class="dottedline-wrapper first">
+        {% include "components/timeline/timeline.html" %}
 
-    {{testimonial('Jimmy Goedhart',
+        {% include "components/whypay/whypay.html" %}
+
+        {{testimonial('Jimmy Goedhart',
                 'visual designer at UNITiD',
                 'It’s exciting to be part of this project. Especially with the powerful
                     features we have in mind for future releases.',
                 'A010_photo@2x.jpg')}}
+    </div>
 
     {% include "components/tinydetails/tinydetails.html" %}
 
-    {{testimonial('Ivo Jansch',
-        'developer at Egeniq',
-        'I’ve tried a bunch of apps over the years, but never found one simple enough for my needs.
-        Now we finally ha ve the opportunity to build it ourselves!',
-        'B012_photo@2x.jpg')}}
+    <div class="dottedline-wrapper">
+        {{testimonial('Ivo Jansch',
+            'developer at Egeniq',
+            'I’ve tried a bunch of apps over the years, but never found one simple enough for my needs.
+            Now we finally ha ve the opportunity to build it ourselves!',
+            'B012_photo@2x.jpg')}}
+
 
     {% include "components/form-beta-tester/form-beta-tester.html" %}
-
+    </div>
     <div class="member-head">
         <img src="{{paths.assets}}images/C008_landscape.svg"
             onerror="this.src='{{ paths.assets }}images/C008_landscape@2x.png'">
