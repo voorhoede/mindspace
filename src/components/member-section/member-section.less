@@ -6,6 +6,7 @@
 .member-section {
 	text-align: center;
 	padding: 0 10px;
+	background: ;
 
 	.section-title {
 		color: #fff;
@@ -41,9 +42,14 @@
 		height: auto;
 	}
 	.sign{
-		width: 20%;
+		width: 30%;
 		position:absolute;
 		left:10%;
+		top:3em;
+		@media(@xs){
+			top: 1em;
+			width: 20%;
+		}
 		.member-count{
 			font-family: @semibold-font;
 			color:#000;
