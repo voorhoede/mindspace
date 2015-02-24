@@ -38,5 +38,27 @@
 			width: 73%;
 		}
 	}
+	.testimonial-2, .testimonial-1{
+		position: relative;
+		&:before{
+			@media(@sm){
+				display: block;
+				position: absolute;
+				content: "";
+				background: url(images/A001_dhuttle_xs.svg)  no-repeat;
+				background-size: 100%;
+				height: 60px;
+				width: 100px;
+				top:0;
+			}
+		}
+	}
+	.testimonial-1:before{
+		right:120px;
+	}
+	.testimonial-2:before{
+		right:0;
+		top:30px
+	}
 }
 /* /testimonial component */
