@@ -1,39 +1,25 @@
 @import (reference) "../app-core-styles/styles/variables";
 @import (once) "../app-core-styles/app-core-styles";
 
-@keyframes hover {
-	0% {transform: translateY(0);}
-	50% {transform: translateY(5%);}
-	100% {transform: translateY(0);}
+.keyframes(@name, @frames) {
+	@-webkit-keyframes @name { @frames(); }
+	@-moz-keyframes @name { @frames(); }
+	@-ms-keyframes @name { @frames(); }
+	@-o-keyframes @name { @frames(); }
+	@keyframes @name { @frames(); }
 }
 
-@-webkit-keyframes hover {
+.keyframes(hover, {
 	0% {transform: translateY(0);}
-	50% {transform: translateY(5%);}
+	50% {transform: translateY(-10px);}
 	100% {transform: translateY(0);}
-}
-@-moz-keyframes hover {
-	0% {transform: translateY(0);}
-	50% {transform: translateY(5%);}
-	100% {transform: translateY(0);}
-}
+});
 
-@keyframes scale-shadow {
-	0% {transform: scaleX(1) translateY(0%);}
-	50% {transform: scaleX(1.1) translateY(-12%);}
-	100% {transform: scaleX(1) translateY(0%);}
-}
-
-@-webkit-keyframes scale-shadow {
-	0% {transform: scaleX(1) translateY(0%);}
-	50% {transform: scaleX(1.1) translateY(-12%);}
-	100% {transform: scaleX(1) translateY(0%);}
-}
-@-moz-keyframes scale-shadow {
-	0% {transform: scaleX(1) translateY(0%);}
-	50% {transform: scaleX(1.1) translateY(-12%);}
-	100% {transform: scaleX(1) translateY(0%);}
-}
+.keyframes(scale-shadow, {
+	0% {transform: scaleX(1.1) translateY(0%);}
+	50% {transform: scaleX(0.9) translateY(0%);}
+	100% {transform: scaleX(1.1) translateY(0%);}
+});
 
 
 /* whatis component */
@@ -77,17 +63,22 @@
 	}
 
 	.whatis-ufo {
-		-moz-animation:hover 5s linear infinite;
-		-webkit-animation:hover 5s linear infinite;
-		animation:hover 5s linear infinite;
+
 		margin:0 auto;
 		width: 100%;
 	}
 
+	.ufo {
+		-moz-animation:hover 3s linear infinite;
+		-webkit-animation:hover 3s linear infinite;
+		animation:hover 3s linear infinite;
+	}
+
 	.whatis-ufo-shadow {
-		-moz-animation:scale-shadow 5s linear infinite;
-		-webkit-animation:scale-shadow 5s linear infinite;
-		animation:scale-shadow 5s linear infinite;
+		-moz-animation:scale-shadow 3s ease-in-out infinite;
+		-webkit-animation:scale-shadow 3s ease-in-out infinite;
+		animation:scale-shadow 3s ease-in-out infinite;
+
 		left:50%;
 		margin-left: -17%;
 		position: absolute;

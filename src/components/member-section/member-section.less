@@ -2,6 +2,30 @@
 @import (reference) "../app-core-styles/styles/variables";
 @import (once) "../app-core-styles/app-core-styles";
 
+@keyframes moveAstronaut {
+	0% {transform: translateX(5px) rotate(0);}
+	10% {transform: translateX(-5px) rotate(-30deg);}
+	30% {transform: translateX(-5px) rotate(-30deg);}
+	40% {transform: translateX(5px) rotate(0);}
+	100% {transform: translateX(5px) rotate(0);}
+}
+
+@-webkit-keyframes moveAstronaut {
+	0% {transform: translateX(5px) rotate(0);}
+	10% {transform: translateX(-5px) rotate(-30deg);}
+	30% {transform: translateX(-5px) rotate(-30deg);}
+	40% {transform: translateX(5px) rotate(0);}
+	100% {transform: translateX(5px) rotate(0);}
+}
+@-moz-keyframes moveAstronaut {
+	0% {transform: translateX(5px) rotate(90deg);}
+	10% {transform: translateX(-5px) rotate(-30deg);}
+	30% {transform: translateX(-5px) rotate(-30deg);}
+	40% {transform: translateX(5px) rotate(0);}
+	100% {transform: translateX(5px) rotate(0);}
+}
+
+
 /* member-section component */
 .member-section {
 	text-align: center;
@@ -73,6 +97,7 @@
 	.launchbase{
 		float: right;
 		width: 70%;
+		position: relative;
 		@media(@none){
 			margin-top:-3em;
 		}
@@ -84,6 +109,26 @@
 		}
 		@media(@md){
 			margin-top:-15em;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 20px;
+			height: 30px;
+			background: url('/assets/images/C007_astronaut.png') no-repeat;
+			background-size: 100%;
+			z-index: 0;
+			top: 58%;
+			left: 10%;
+			-moz-animation: moveAstronaut 6s linear infinite;
+			-webkit-animation: moveAstronaut 6s linear infinite;
+			animation: moveAstronaut 6s linear infinite;
+		}
+
+		img {
+			z-index: 1;
+			position: relative;
 		}
 	}
 }
