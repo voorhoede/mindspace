@@ -32,7 +32,9 @@
 {% endmacro %}
 
 <section class="form-beta-tester" data-component="form-beta-tester">
-    <img src="/assets/images/C001_ufo.png" class="ufo-image" alt="Big ufo">
+    <img src="{{ paths.assets }}images/C001_ufo.svg"
+         onerror="this.onerror=''; this.src='{{ paths.assets }}images/C001_ufo.png'"
+         class="ufo-image" alt="Big ufo">
     <form class="moon-part">
         <div class="form-part form-step-signup visible" data-form-part="1">
             <h2 class="section-title">We need you as a beta tester!</h2>

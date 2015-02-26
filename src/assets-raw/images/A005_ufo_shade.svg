@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="270px" height="37px" viewBox="0 0 270 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
-    <title>A005_ufo_shade</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="L" sketch:type="MSArtboardGroup" transform="translate(-824.000000, -1466.000000)" fill="#D8D8D8">
-            <g id="What-is-Mindspace?" sketch:type="MSLayerGroup" transform="translate(-209.000000, 1141.000000)">
-                <g id="Ufo-met-schaduw" transform="translate(851.000000, 0.000000)" sketch:type="MSShapeGroup">
-                    <ellipse id="A005_ufo_shade" cx="317.21926" cy="343.933082" rx="134.5" ry="18.0554981"></ellipse>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="270" height="37" viewBox="0 0 270 37" xmlns="http://www.w3.org/2000/svg"><title>A005_ufo_shade</title><desc>Created with Sketch.</desc><ellipse cx="317.219" cy="343.933" rx="134.5" ry="18.055" transform="translate(-182 -325)" fill="#D8D8D8" fill-rule="evenodd"/></svg>

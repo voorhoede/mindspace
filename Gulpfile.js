@@ -166,7 +166,7 @@ function configureNunjucks() {
 function copyAssetsTask() {
 	paths.assetFiles.map(function(path){
 		return gulp.src(path, { base: paths.src })
-			.pipe(newer(paths.distAssets))
+			//.pipe(newer(paths.distAssets))
 			.pipe(rename(function(p){
 				p.dirname = p.dirname
 					.split('/')
