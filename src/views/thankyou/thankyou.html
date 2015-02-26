@@ -1,0 +1,57 @@
+{% extends "views/_base-view/base-view.html" %}
+
+{% block title %}mindspace | {{ super() }}{% endblock %}
+
+<!--include testimonial macro-->
+{% include "components/testimonial/testimonial.html" %}
+
+{% block content %}
+<!-- mindspace view -->
+<div class="intro-wrapper">
+    {% include "components/intro/intro.html" %}
+</div>
+<div class="whatis-wrapper">
+    {% include "components/whatis/whatis.html" %}
+</div>
+
+{{testimonial('Daan van Klinken',
+'interaction designer at UNITiD',
+'Keeping notes during a design discussion is now just one shortcut away',
+'A010_photo@2x.jpg',
+'testimonial-1')}}
+
+<div class="dottedline-wrapper first">
+    {% include "components/timeline/timeline.html" %}
+
+    {% include "components/whypay/whypay.html" %}
+
+    {{testimonial('Jimmy Goedhart',
+    'visual designer at UNITiD',
+    'It’s exciting to be part of this project. Especially with the powerful
+    features we have in mind for future releases.',
+    'A010_photo@2x.jpg')}}
+</div>
+
+{% include "components/tinydetails/tinydetails.html" %}
+
+<div class="dottedline-wrapper">
+    {{testimonial('Ivo Jansch',
+    'developer at Egeniq',
+    'I’ve tried a bunch of apps over the years, but never found one simple enough for my needs.
+    Now we finally ha ve the opportunity to build it ourselves!',
+    'B012_photo@2x.jpg',
+    'testimonial-2')}}
+
+
+    {% include "components/form-thankyou/form-thankyou.html" %}
+</div>
+<div class="member-head">
+    <img src="{{paths.assets}}images/C008_landscape.svg"
+         onerror="this.onerror=''; this.src='{{ paths.assets }}images/C008_landscape.png'">
+</div>
+
+<div class="member-wrapper">
+    {% include "components/member-section/member-section.html" %}
+</div>
+<!-- /mindspace view -->
+{% endblock %}

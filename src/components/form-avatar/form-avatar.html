@@ -35,24 +35,32 @@
     <img src="{{ paths.assets }}images/C001_ufo.svg"
          onerror="this.onerror=''; this.src='{{ paths.assets }}images/C001_ufo.png'"
          class="ufo-image" alt="Big ufo">
-    <form class="moon-part" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="C722KJYPHH2AU">
-        <img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+    <form class="moon-part" accept-charset="UTF-8" action="https://formkeep.com/f/dc92a5534b3e" method="POST">
+        <input type="hidden" name="utf8" value="✓">
 
-        <div class="form-part form-step-signup visible" data-form-part="1">
-            <h2 class="section-title">We need you as a beta tester!</h2>
-            <span class="section-subtitle"><strong>Become one of the 100 lucky co-pilots by pledging $ 4.50. Every single one of you will get:</strong></span>
+        <div class="form-part form-step-avatar visible" data-form-part="2">
+            <h2 class="section-title">Awesome, thanks for your support!</h2>
+            <span class="section-subtitle"><strong>Ready for the spotlight? </strong></span>
+            <p> Complete your registration by selecting your funky suit.</p>
 
-            <ul class="icon-list checked">
-                <li>Exclusive access to the beta version of the app</li>
-                <li>2 free years of Mindspace when we launch version 1.0</li>
-                <li>A special reduced yearly fee of $ 4.50 after the first two years</li>
-                <li>Eternal fame! We mention your name in the ‘about section’ off the app</li>
+            <input type="text" placeholder="Name" name="name">
+            <input type="text" placeholder="Email" name="email">
+            <select>
+                <option value="">Country</option>
+                <option value="nl">Netherlands</option>
+                <option value="a">A country</option>
+                <option value="a">A country</option>
+            </select>
+
+            <ul class="avatar-select flat-list">
+                {{ avatar('1', 'http://lorempixel.com/100/100/people', 'A funky name') }}
+                {{ avatar('2', 'http://lorempixel.com/100/100/people', 'A funky name') }}
+                {{ avatar('3', 'http://lorempixel.com/100/100/people', 'A funky name') }}
+                {{ avatar('4', 'http://lorempixel.com/100/100/people', 'A funky name') }}
+                {{ avatar('5', 'http://lorempixel.com/100/100/people', 'A funky name') }}
+                {{ avatar('6', 'http://lorempixel.com/100/100/people', 'A funky name') }}
             </ul>
-
-            <button name="submit" data-form-handle="next"> Button text </button>
-            <img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+            <button data-form-handle="next"> Next </button>
         </div>
     </form>
 </section>

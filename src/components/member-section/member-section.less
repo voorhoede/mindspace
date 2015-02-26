@@ -3,26 +3,26 @@
 @import (once) "../app-core-styles/app-core-styles";
 
 @keyframes moveAstronaut {
-	0% {transform: translateX(5px) rotate(0);}
-	10% {transform: translateX(-5px) rotate(-30deg);}
-	30% {transform: translateX(-5px) rotate(-30deg);}
-	40% {transform: translateX(5px) rotate(0);}
-	100% {transform: translateX(5px) rotate(0);}
+	0% {transform: translateX(0) rotate(0);}
+	10% {transform: translateX(5px) rotate(30deg);}
+	30% {transform: translateX(5px) rotate(30deg);}
+	40% {transform: translateX(-5px) rotate(0);}
+	100% {transform: translateX(-5px) rotate(0);}
 }
 
 @-webkit-keyframes moveAstronaut {
-	0% {transform: translateX(5px) rotate(0);}
-	10% {transform: translateX(-5px) rotate(-30deg);}
-	30% {transform: translateX(-5px) rotate(-30deg);}
-	40% {transform: translateX(5px) rotate(0);}
-	100% {transform: translateX(5px) rotate(0);}
+	0% {transform: translateX(0) rotate(0);}
+	10% {transform: translateX(5px) rotate(30deg);}
+	30% {transform: translateX(5px) rotate(30deg);}
+	40% {transform: translateX(-5px) rotate(0);}
+	100% {transform: translateX(-5px) rotate(0);}
 }
 @-moz-keyframes moveAstronaut {
-	0% {transform: translateX(5px) rotate(90deg);}
-	10% {transform: translateX(-5px) rotate(-30deg);}
-	30% {transform: translateX(-5px) rotate(-30deg);}
-	40% {transform: translateX(5px) rotate(0);}
-	100% {transform: translateX(5px) rotate(0);}
+	0% {transform: translateX(0) rotate(0);}
+	10% {transform: translateX(5px) rotate(30deg);}
+	30% {transform: translateX(5px) rotate(30deg);}
+	40% {transform: translateX(-5px) rotate(0);}
+	100% {transform: translateX(-5px) rotate(0);}
 }
 
 
@@ -35,9 +35,8 @@
 		color: #fff;
 		padding: 2em 0 1em;
 	}
-
-
 }
+
 .member-content {
 	max-width: 600px;
 	margin: 0 auto;
@@ -69,9 +68,16 @@
 		position:absolute;
 		left:10%;
 		top:3em;
-		@media(@xs){
-			top: 1em;
-			width: 20%;
+		z-index: 2;
+
+		@media(@sm){
+			top: -4em;
+			width: 250px;
+		}
+
+		@media(@md){
+			top: -10em;
+			width: 250px;
 		}
 		.member-count{
 			font-family: @semibold-font;
@@ -112,16 +118,19 @@
 		}
 
 		&:before {
-			content: '';
-			position: absolute;
-			width: 20px;
-			height: 30px;
-			background: url('/assets/images/C007_astronaut.png') no-repeat;
-			background-size: 100%;
-			z-index: 0;
-			top: 58%;
-			left: 10%;
-			.animation(moveAstronaut, 6s, linear, infinite);
+			@media(@sm) {
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 30px;
+				background: url('/assets/images/C007_astronaut.png') no-repeat;
+				background-size: 100%;
+				z-index: 0;
+				top: 54%;
+				right: -5px;
+
+				.animation(moveAstronaut, 6s, linear, infinite);
+			}
 		}
 
 		img {

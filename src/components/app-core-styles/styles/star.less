@@ -21,13 +21,14 @@ body {
 	background-size: 50%;
 }
 body:before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
 	@media(@sm){
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+
 		background: linear-gradient(0, transparent 0, @background 44%, @background 56%, transparent 100%);
 		background-size: 50px 50px;
 		z-index: -1;

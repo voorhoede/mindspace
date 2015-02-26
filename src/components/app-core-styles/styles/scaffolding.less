@@ -33,21 +33,21 @@ body {
 }
 
 a:link {
-	color: @brand-default;
+	color: @white;
 	-webkit-transition: color 200ms ease-out;
 	-moz-transition: color 200ms ease-out;
 	transition: color 200ms ease-out;
 	text-decoration: none;
 }
+a,
+a:active,
 a:visited {
-	color: darken(@brand-default, 20%);
-}
-a:hover,
-a:focus {
-	color: lighten(@brand-default, 20%);
-}
-a:active {
+	color: @white;
+	text-decoration: underline;
 
+	&:hover {
+		color: red;
+	}
 }
 main section,
 .header-wrapper nav{
