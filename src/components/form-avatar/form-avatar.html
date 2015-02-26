@@ -9,26 +9,8 @@
 {% macro avatar(avatarId, avatarImage, avatarAlt) %}
 <li>
     <label for="{{ avatarId }}"><img src="{{ avatarImage }}" alt="{{ avatarAlt }}"/></label>
-    <input id="{{ avatarId }}" type="radio" name="avatar"/>
+    <input id="{{ avatarId }}" type="radio" value="{{ avatarId }}" name="avatar"/>
 </li>
-{% endmacro %}
-
-{% macro facebook(url) %}
-<a class="social-icon facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ url | urlencode }}">
-    Facebook
-</a>
-{% endmacro %}
-
-{% macro linkedIn(url, title, text, source) %}
-<a class="social-icon linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url={{ url | urlencode }}&title={{ title | urlencode }}&summary={{ text | urlencode }}&source={{ source | urlencode }}">
-    LinkedIn
-</a>
-{% endmacro %}
-
-{% macro twitter(url, text) %}
-<a class="social-icon twitter" href="http://twitter.com/intent/tweet?url={{ url | urlencode }}&text={{ text | urlencode }}">
-    Twitter
-</a>
 {% endmacro %}
 
 <section class="form-beta-tester" id="supportUs" data-component="form-beta-tester">
@@ -47,7 +29,7 @@
             <input type="text" placeholder="Email" name="email">
             <select>
                 <option value="">Country</option>
-                <option value="nl">Netherlands</option>
+                <option value="a">A country</option>
                 <option value="a">A country</option>
                 <option value="a">A country</option>
             </select>

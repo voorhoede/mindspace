@@ -7,6 +7,20 @@
 	position: relative;
 	margin-bottom: 20em;
 
+
+	@media (@sm) {
+		&:before {
+			content: '';
+			position: absolute;
+			top: 850px;
+			width: 300px;
+			background: url('images/C005_stippellijn.png') no-repeat;
+			height: 1000px;
+			background-size: 70%;
+			z-index: 2;
+			left: 60px;
+		}
+	}
 	@media (@sm) {
 		padding: 140px 0 0 0;
 	}
@@ -115,18 +129,23 @@
 		}
 	}
 	.social-icon {
-		border-radius: 100%;
-		background: url('http://lorempixel.com/100/100/people');
-		width: 60px;
-		height: 60px;
+		background: url('images/C009_facebook.png') no-repeat;
+		background-size: 100%;
+		width: 70px;
+		height: 70px;
 		display: block;
 		margin: 0 auto;
 		text-indent: -9999px;
 	}
 
-	.facebook {}
-	.linkedin {}
-	.twitter {}
+	.linkedin {
+		background: url('images/C009_linkedin.png') no-repeat;
+		background-size: 100%;
+	}
+	.twitter {
+		background: url('images/C009_twitter.png') no-repeat;
+		background-size: 100%;
+	}
 
 	.section-title,
 	.section-subtitle {
