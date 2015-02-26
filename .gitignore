@@ -6,3 +6,7 @@ src/vendor
 # project meta
 .idea
 npm-debug.log
+
+# cms
+unitid-mindspace-cms/static
+unitid-mindspace-cms/.build

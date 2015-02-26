@@ -1,18 +1,14 @@
-<!-- testimonial macro -->
-{% macro testimonial(name, position, quote, image, class) %}
 <div class="testimonial" data-component="testimonial">
     <section class="{{class}}">
         <h2>Team Mindspace</h2>
         <blockquote>
-            &ldquo;{{quote}}&rdquo;
+            &ldquo;{% cms "quote" %}It’s exciting to be part of this project. Especially with the powerful features we have in mind for future releases.{% endcms %}&rdquo;
         </blockquote>
         <figure>
-            <img src="{{paths.assets}}images/{{image}}" alt="picture of quoted author"/>
+            <img src="{% cms "image.url" %}{{paths.assets}}images/A010_photo@2x.jpg{% endcms %}" alt="picture of quoted author"/>
             <figcaption>
-                <em>{{name}}</em>, {{position}}
+                <em>{% cms "name" %}Jimmy Goedhart{% endcms %}</em>, {% cms "role" %}visual designer at UNITiD{% endcms %}
             </figcaption>
         </figure>
     </section>
 </div>
-{% endmacro %}
-<!-- /testimonial component -->

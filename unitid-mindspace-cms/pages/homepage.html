@@ -1,0 +1,31 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %} - {{ cms.homepage.name }}{% endblock %}
+{% block content %}
+  <div class="intro-wrapper">
+      {% include "templates/partials/intro.html" %}
+  </div>
+  <div class="whatis-wrapper">
+      {% include "templates/partials/whatis.html" %}
+  </div>
+  {% set item = getItem('testimonials', '-Jj4lpWwHPLIYfnwAlvW', true) %}
+  {% include "templates/partials/testimonial.html" %}
+  <div class="dottedline-wrapper first">
+    {% include "templates/partials/timeline.html" %}
+    {% include "templates/partials/whypay.html" %}
+    {% set item = getItem('testimonials', '-Jj47hS8tYrpJm8UERfD', true) %}
+    {% include "templates/partials/testimonial.html" %}
+  </div>
+  {% include "templates/partials/tinydetails.html" %}
+  <div class="dottedline-wrapper">
+    {% set item = getItem('testimonials', '-Jj4ux94Y-we4O_rCUA9', true) %}
+    {% include "templates/partials/testimonial.html" %}
+    {% include "templates/partials/form-beta-tester.html" %}
+  </div>
+  <div class="member-head">
+    <img src="/static/images/C008_landscape.svg"
+        onerror="this.src='/static/images/C008_landscape@2x.png'">
+  </div>
+  <div class="member-wrapper">
+      {% include "templates/partials/member-section.html" %}
+  </div>
+{% endblock %}

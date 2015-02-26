@@ -40,10 +40,14 @@ gulp.task('build_assets', function(cb) { runSequence('imagemin', 'copy_assets', 
 gulp.task('build_clean',  function(cb) { runSequence('clean_dist', 'build', cb); });
 gulp.task('build_guide',  function(cb) { runSequence('build_clean', 'build_previews', 'build_module_info', cb); });
 gulp.task('build_html', buildHtmlTask);
-gulp.task('build_js',['jshint_src'], buildJsTask);
+gulp.task('build_js', ['jshint_src'], buildJsTask);
 gulp.task('build_less', buildLessTask);
 gulp.task('build_module_info', buildModuleInfoTask);
 gulp.task('build_previews', buildPreviewsTask);
+gulp.task('build_all', function(cb) { runSequence('build_guide', 'cms_import_components', 'cms_import_css', 'cms_import_js', cb); });
+gulp.task('cms_import_components', importComponentsToCms);
+gulp.task('cms_import_css', copyCssToCms);
+gulp.task('cms_import_js', copyJsToCms);
 gulp.task('clean_dist', function (cb) { del([paths.dist], cb); });
 gulp.task('copy_assets', copyAssetsTask);
 gulp.task('create_module', createModule);
@@ -58,6 +62,7 @@ gulp.task('serve', serveTask);
 gulp.task('test_run', testTask('run'));
 gulp.task('test_watch', testTask('watch'));
 gulp.task('watch', function(/*cb*/) { runSequence(['build_guide', 'serve'], watchTask); });
+gulp.task('watch_cms', function(/*cb*/) { runSequence(['build_all', 'serve'], watchTask); });
 gulp.task('zip_dist', zipDistTask);
 
 /* Tasks and utils (A-Z) */
@@ -153,10 +158,27 @@ function buildLessTask() {
 		.pipe(reloadBrowser({ stream:true }));
 }
 
-function configureNunjucks() {
-	var env = nunjucksRender.nunjucks.configure(paths.src, {watch: false });
+/**
+ * Configure Nunjucks rendering; add filters & extensions
+ * Options:
+ *   cms {boolean} If true, renders cms tags in {% cms %} blocks; placeholders otherwise
+ *   renderOptions {object} passed to nunjucksRender configuration
+ *
+ * @param  {object} options
+ */
+function configureNunjucks(options) {
+	var defaults = {
+		cms: false,
+		renderOptions: {
+			watch: false
+		}
+	};
+	var config = _.extend(defaults, options);
+	var cmsBlock = require('./lib/nunjucks-extension-cms-block');
+	var env = nunjucksRender.nunjucks.configure(paths.src, config.renderOptions);
 	env.addFilter('match', require('./lib/nunjucks-filter-match'));
 	env.addFilter('prettyJson', require('./lib/nunjucks-filter-pretty-json'));
+	env.addExtension('cmsBlock', new cmsBlock(config.cms));
 }
 
 /**
@@ -173,7 +195,42 @@ function copyAssetsTask() {
 					.filter(function(dir){ return (dir !== 'assets'); })
 					.join('/');
 			}))
-			.pipe(gulp.dest(paths.distAssets));
+			.pipe(gulp.dest(paths.distAssets))
+			// FIX!
+			// maybe use gulpif to check if files should be copied to cms folder
+			.pipe(gulp.dest(paths.cms + 'static/'));
+	});
+}
+
+/**
+ * Copy CSS files from dist to cms static folder
+ */
+function copyCssToCms() {
+	copyDistToCms({
+		'assets/index.css': 'static/index.css',
+		'assets/index.css.map': 'static/index.css.map'
+	});
+}
+
+/**
+ * Copy JS files from dist to cms static folder
+ */
+function copyJsToCms() {
+	copyDistToCms({
+		'assets/index.js': 'static/index.js',
+		'assets/index.js.map': 'static/index.js.map'
+	});
+}
+
+/**
+ * Copy files from dist to cms static folder
+ * @param {object} files Object with src:dest
+ */
+function copyDistToCms(files) {
+	Object.keys(files).forEach(function(key) {
+		return gulp.src(paths.dist + key)
+			.pipe(rename(files[key]))
+			.pipe(gulp.dest(paths.cms));
 	});
 }
 
@@ -206,9 +263,16 @@ function highlightCode(code, lang){
 	return code;
 }
 
-function htmlModuleData(file) {
+/**
+ * Returns object to parse in Nunjucks template
+ * @param  {file} file
+ * @param  {string} pathToAssets
+ * @return {object}
+ */
+function htmlModuleData(file, pathToAssets) {
 	var pathToRoot = path.relative(file.relative, '.');
-	pathToRoot = pathToRoot.substring(0, pathToRoot.length - 2);
+	pathToRoot = pathToRoot.substring(0, pathToRoot.length - 2); // Magic.
+	pathToAssets = pathToAssets || 'assets/';
 	return {
 		module: {
 			id: path.dirname(file.relative),
@@ -216,7 +280,7 @@ function htmlModuleData(file) {
 			html: file.contents.toString()
 		},
 		paths: {
-			assets: pathToRoot + 'assets/',
+			assets: pathToRoot + pathToAssets,
 			root: pathToRoot
 		},
 		pkg: pkg
@@ -257,6 +321,25 @@ function imageminTask () {
 			path.dirname = renameImageDir(path.dirname);
 		}))
 		.pipe(gulp.dest(paths.src));
+}
+
+/**
+ * Render guide components and copy them to cms partials folder
+ * @return {stream}
+ */
+function importComponentsToCms() {
+	var src = paths.srcComponents + '**/*.html',
+			dest = paths.cms + 'templates/partials';
+	configureNunjucks({ cms: true });
+
+	return gulp.src(src)
+		.pipe(rename(function(p) { // strip dirname, we want all components in the root
+			p.dirname = '';
+		}))
+		.pipe(nunjucksRender(function(file) {
+			return htmlModuleData(file, 'static/');
+		}))
+		.pipe(gulp.dest(dest));
 }
 
 function jshintNodeTask() {

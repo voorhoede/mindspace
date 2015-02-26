@@ -12,7 +12,8 @@ var paths = {
 	distViews: 'dist/views/',
 	amdConfig: './src/amd-config.json',
 	karmaConfig:'./test/karma.conf.js',
-	changelog:'CHANGELOG.md'
+	changelog:'CHANGELOG.md',
+	cms: 'unitid-mindspace-cms/'
 };
 paths.assetFiles = [
 		paths.src + 'assets/**/*.*',
