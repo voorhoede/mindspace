@@ -7,17 +7,17 @@
   <div class="whatis-wrapper">
       {% include "templates/partials/whatis.html" %}
   </div>
-  {% set item = getItem('testimonials', '-Jj4lpWwHPLIYfnwAlvW', true) %}
+  {% set item = cms.testimonials|where('_key', 'daan')|first %}
   {% include "templates/partials/testimonial.html" %}
   <div class="dottedline-wrapper first">
     {% include "templates/partials/timeline.html" %}
     {% include "templates/partials/whypay.html" %}
-    {% set item = getItem('testimonials', '-Jj47hS8tYrpJm8UERfD', true) %}
+    {% set item = cms.testimonials|where('_key', 'jimmy')|first %}
     {% include "templates/partials/testimonial.html" %}
   </div>
   {% include "templates/partials/tinydetails.html" %}
   <div class="dottedline-wrapper">
-    {% set item = getItem('testimonials', '-Jj4ux94Y-we4O_rCUA9', true) %}
+    {% set item = cms.testimonials|where('_key', 'ivo')|first %}
     {% include "templates/partials/testimonial.html" %}
     {% include "templates/partials/form-beta-tester.html" %}
   </div>
