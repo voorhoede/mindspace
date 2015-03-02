@@ -13,6 +13,17 @@
 
 	$ gulp build_guide
 	$ gulp serve
+	
+**Serve cms**
+
+	$ npm install -g wh
+	$ wh init unitid-mindspace
+	$ npm install
+	$ wh serve
+	
+Once all changes done, you can use, to push the changes:
+
+	$wh deploy 
 
 **Help?**
 
