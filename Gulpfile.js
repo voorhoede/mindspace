@@ -175,10 +175,12 @@ function configureNunjucks(options) {
 	};
 	var config = _.extend(defaults, options);
 	var cmsBlock = require('./lib/nunjucks-extension-cms-block');
+	var cmsRepeatBlock = require('./lib/nunjucks-extension-cmsrepeat-block');
 	var env = nunjucksRender.nunjucks.configure(paths.src, config.renderOptions);
 	env.addFilter('match', require('./lib/nunjucks-filter-match'));
 	env.addFilter('prettyJson', require('./lib/nunjucks-filter-pretty-json'));
 	env.addExtension('cmsBlock', new cmsBlock(config.cms));
+	env.addExtension('cmsRepeatBlock', new cmsRepeatBlock(config.cms));
 }
 
 /**
